@@ -17,7 +17,7 @@
     <title>Install Script - Step Two</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
-    <link href="styles/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <link href="styles/sweat_alert.css" rel="stylesheet">
     <!--- stylesheet width modifications --->
@@ -67,7 +67,7 @@
                   <div class="col-md-3 control-label h5 mt-2"> Site Title </div>
                   <div class="col-md-8">
                     <input type="text" name="site_title" class="form-control" required>
-                    <small>E.g. miver - Freelance MarketPlace</small>
+                    <small>E.g. GigToDo - Freelance MarketPlace</small>
                   </div>
                 </div>
                 <!-- form-group row Ends -->
@@ -76,7 +76,7 @@
                   <div class="col-md-3 control-label h5 mt-2"> Site Url </div>
                   <div class="col-md-8">
                     <input type="text" name="site_url" class="form-control" required>
-                    <small>E.g https://www.miver.com (include the protocol "http://")</small>
+                    <small>E.g https://www.gigtodo.com (include the protocol "http://")</small>
                   </div>
                 </div>
                 <!-- form-group row Ends -->
@@ -92,7 +92,7 @@
                   <div class="col-md-3 control-label h5 mt-2"> Site Name <span class="text-danger">*</span> </div>
                   <div class="col-md-8">
                     <input type="text" name="site_name" class="form-control" required>
-                    <small>E.g. miver</small>
+                    <small>E.g. GigToDo</small>
                   </div>
                 </div><!-- form-group row Ends -->
                 <div class="form-group row "><!-- form-group row Starts -->
@@ -107,7 +107,7 @@
                   <div class="col-md-3 control-label h5 mt-2"> JwPlayer Code <small class="text-muted">(Optional)</small> </div>
                   <div class="col-md-8">
                     <input type="text" name="jwplayer_code" class="form-control">
-                    <small> <a href="http://help.miverscript.com/knowledge/details/3/How-to-get-the-JwPlayer-code-.html" target="_blank" class="text-success">How To?</a></small>
+                    <small> <a href="http://help.gigtodoscript.com/knowledge/details/3/How-to-get-the-JwPlayer-code-.html" target="_blank" class="text-success">How To?</a></small>
                   </div>
                 </div>
                 <!-- form-group row Ends -->

@@ -4,7 +4,7 @@
 <title> Install Script - Final Step</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
-<link href="styles/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="styles/bootstrap.css" rel="stylesheet">
 <link href="styles/styles.css" rel="stylesheet">
 <link href="styles/sweat_alert.css" rel="stylesheet">
 <!--- stylesheet width modifications --->
@@ -43,7 +43,7 @@
           <h3>Congrats! Installation Completed! </h3>
           <hr>
           <p>You have successfully completed the installation process. Now you're all set! You can start using our script. If you have any questions or face any issues, open a ticket on our 
-          <a target="_black" class="text-success" href="http://help.miverscript.com">Support Help Desk</a> and someone will get to you ASAP. If you want customizations on this script, or need help on any other project, email us at info@pixinal.com or info@miverScript.com. Please like us on <a target="_black" href="https://www.facebook.com/miverscript" class="text-success"> Facebook. </a><br> </p>
+          <a target="_black" class="text-success" href="http://help.gigtodoscript.com">Support Help Desk</a> and someone will get to you ASAP. If you want customizations on this script, or need help on any other project, email us at info@pixinal.com or info@GigToDoScript.com. Please like us on <a target="_black" href="https://www.facebook.com/gigtodoscript" class="text-success"> Facebook. </a><br> </p>
           <a href="index" target="_black" class="btn btn-primary">Visit Front End Website</a> &nbsp;&nbsp;&nbsp;
           <a href="admin/index" target="_black" class="btn btn-primary">Visit Admin Panel Website</a>
         </div><!-- card-body Ends -->

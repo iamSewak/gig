@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Sep 18, 2020 at 09:08 AM
--- Server version: 10.3.23-MariaDB-cll-lve
--- PHP Version: 7.2.32
+-- Host: 127.0.0.1
+-- Generation Time: Jun 09, 2020 at 07:00 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u313608345_miver`
+-- Database: `gigtodo-empty`
 --
 
 -- --------------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_user_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`, `admin_country`, `admin_job`, `admin_about`, `isS3`) VALUES
-(1, 'admin', '', 'iamsewak@gmail.com', '$2y$10$EW4XNdkn9NonBsH12a8tI.2xSxLn2l1zxaz/1NoytZklsNuP.QmXa', '', '', '', '', '', 0);
+(1, '', '', '', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -63,143 +63,6 @@ CREATE TABLE `admin_logs` (
   `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `admin_logs`
---
-
-INSERT INTO `admin_logs` (`id`, `admin_id`, `work`, `work_id`, `date`, `status`) VALUES
-(1, 1, 'proposal', 2, 'August 02, 2020 18:33:25', 'approved'),
-(2, 1, 'general_settings', 0, 'August 03, 2020 14:33:55', 'updated'),
-(3, 1, 'proposal', 3, 'August 04, 2020 14:12:33', 'approved'),
-(4, 1, 'proposal', 4, 'August 04, 2020 14:19:57', 'approved'),
-(5, 1, 'proposal', 5, 'August 08, 2020 11:21:51', 'approved'),
-(6, 1, 'term', 1, 'August 08, 2020 13:33:59', 'updated'),
-(7, 1, 'post_cat', 1, 'August 16, 2020 07:08:55', 'updated'),
-(8, 1, 'post', 1, 'August 16, 2020 07:14:21', 'inserted'),
-(9, 1, 'post', 1, 'August 16, 2020 07:14:44', 'updated'),
-(10, 1, 'seller_balance', 3, 'August 17, 2020 11:42:04', 'updated'),
-(11, 1, 'language', 2, 'August 18, 2020 18:38:32', 'inserted'),
-(12, 1, 'language_settings', 2, 'August 18, 2020 18:38:50', 'updated'),
-(13, 1, 'language', 2, 'August 18, 2020 18:39:21', 'updated'),
-(14, 1, 'seller_language', 4, 'August 19, 2020 10:38:17', 'inserted'),
-(15, 1, 'request', 1, 'August 24, 2020 11:44:53', 'approved'),
-(16, 1, 'proposal', 6, 'August 24, 2020 14:53:42', 'approved'),
-(17, 1, 'proposal', 8, 'August 24, 2020 15:01:16', 'approved'),
-(18, 1, 'proposal', 7, 'August 24, 2020 15:01:37', 'approved'),
-(19, 1, 'proposal', 9, 'August 24, 2020 15:06:13', 'approved'),
-(20, 1, 'language_settings', 2, 'August 24, 2020 15:12:05', 'updated'),
-(21, 1, 'cat', 1, 'August 24, 2020 15:13:41', 'updated'),
-(22, 1, 'language_settings', 2, 'August 24, 2020 16:07:57', 'updated'),
-(23, 1, 'cat', 2, 'August 24, 2020 16:11:07', 'updated'),
-(24, 1, 'cat', 3, 'August 24, 2020 16:11:48', 'updated'),
-(25, 1, 'cat', 4, 'August 24, 2020 16:12:27', 'updated'),
-(26, 1, 'cat', 6, 'August 24, 2020 16:13:05', 'updated'),
-(27, 1, 'cat', 7, 'August 24, 2020 16:13:42', 'updated'),
-(28, 1, 'cat', 8, 'August 24, 2020 16:14:43', 'updated'),
-(29, 1, 'cat', 9, 'August 24, 2020 16:15:21', 'updated'),
-(30, 1, 'child_cat', 94, 'August 24, 2020 16:17:03', 'updated'),
-(31, 1, 'child_cat', 93, 'August 24, 2020 16:17:49', 'updated'),
-(32, 1, 'child_cat', 92, 'August 24, 2020 16:18:19', 'updated'),
-(33, 1, 'child_cat', 91, 'August 24, 2020 16:18:45', 'updated'),
-(34, 1, 'child_cat', 89, 'August 24, 2020 16:19:07', 'updated'),
-(35, 1, 'child_cat', 88, 'August 24, 2020 16:19:39', 'updated'),
-(36, 1, 'child_cat', 87, 'August 24, 2020 16:20:00', 'updated'),
-(37, 1, 'child_cat', 86, 'August 24, 2020 16:20:22', 'updated'),
-(38, 1, 'child_cat', 85, 'August 24, 2020 16:20:44', 'updated'),
-(39, 1, 'child_cat', 84, 'August 24, 2020 16:21:12', 'updated'),
-(40, 1, 'child_cat', 83, 'August 24, 2020 16:23:02', 'updated'),
-(41, 1, 'child_cat', 82, 'August 24, 2020 16:25:07', 'updated'),
-(42, 1, 'child_cat', 81, 'August 24, 2020 16:26:46', 'updated'),
-(43, 1, 'child_cat', 80, 'August 24, 2020 16:27:15', 'updated'),
-(44, 1, 'child_cat', 79, 'August 24, 2020 16:27:45', 'updated'),
-(45, 1, 'child_cat', 78, 'August 24, 2020 16:28:12', 'updated'),
-(46, 1, 'child_cat', 77, 'August 24, 2020 16:28:39', 'updated'),
-(47, 1, 'child_cat', 76, 'August 24, 2020 16:29:05', 'updated'),
-(48, 1, 'child_cat', 75, 'August 24, 2020 16:29:27', 'updated'),
-(49, 1, 'child_cat', 74, 'August 24, 2020 16:29:35', 'updated'),
-(50, 1, 'child_cat', 73, 'August 24, 2020 16:30:19', 'updated'),
-(51, 1, 'child_cat', 72, 'August 24, 2020 16:30:39', 'updated'),
-(52, 1, 'child_cat', 71, 'August 24, 2020 16:31:05', 'updated'),
-(53, 1, 'child_cat', 70, 'August 24, 2020 16:31:26', 'updated'),
-(54, 1, 'child_cat', 69, 'August 24, 2020 16:31:49', 'updated'),
-(55, 1, 'child_cat', 68, 'August 24, 2020 16:32:18', 'updated'),
-(56, 1, 'child_cat', 67, 'August 24, 2020 16:32:33', 'updated'),
-(57, 1, 'child_cat', 66, 'August 24, 2020 16:32:59', 'updated'),
-(58, 1, 'child_cat', 65, 'August 24, 2020 16:33:23', 'updated'),
-(59, 1, 'child_cat', 64, 'August 24, 2020 16:33:40', 'updated'),
-(60, 1, 'child_cat', 63, 'August 24, 2020 16:35:30', 'updated'),
-(61, 1, 'child_cat', 62, 'August 24, 2020 16:36:06', 'updated'),
-(62, 1, 'child_cat', 61, 'August 24, 2020 16:36:32', 'updated'),
-(63, 1, 'child_cat', 60, 'August 24, 2020 16:36:54', 'updated'),
-(64, 1, 'child_cat', 58, 'August 24, 2020 16:37:17', 'updated'),
-(65, 1, 'child_cat', 56, 'August 24, 2020 16:39:33', 'updated'),
-(66, 1, 'child_cat', 55, 'August 24, 2020 16:40:09', 'updated'),
-(67, 1, 'child_cat', 54, 'August 24, 2020 16:40:47', 'updated'),
-(68, 1, 'child_cat', 53, 'August 24, 2020 16:41:50', 'updated'),
-(69, 1, 'child_cat', 52, 'August 24, 2020 16:42:17', 'updated'),
-(70, 1, 'child_cat', 51, 'August 24, 2020 16:48:11', 'updated'),
-(71, 1, 'child_cat', 50, 'August 24, 2020 16:48:38', 'updated'),
-(72, 1, 'child_cat', 49, 'August 24, 2020 16:49:04', 'updated'),
-(73, 1, 'child_cat', 48, 'August 24, 2020 16:49:33', 'updated'),
-(74, 1, 'child_cat', 46, 'August 24, 2020 16:49:55', 'updated'),
-(75, 1, 'child_cat', 45, 'August 24, 2020 16:50:14', 'updated'),
-(76, 1, 'child_cat', 44, 'August 24, 2020 16:50:35', 'updated'),
-(77, 1, 'child_cat', 43, 'August 24, 2020 16:50:55', 'updated'),
-(78, 1, 'child_cat', 42, 'August 24, 2020 16:51:21', 'updated'),
-(79, 1, 'child_cat', 41, 'August 24, 2020 16:51:39', 'updated'),
-(80, 1, 'child_cat', 40, 'August 24, 2020 16:55:18', 'updated'),
-(81, 1, 'child_cat', 39, 'August 24, 2020 16:55:39', 'updated'),
-(82, 1, 'child_cat', 38, 'August 24, 2020 16:56:24', 'updated'),
-(83, 1, 'child_cat', 37, 'August 24, 2020 16:56:46', 'updated'),
-(84, 1, 'child_cat', 36, 'August 24, 2020 16:57:27', 'updated'),
-(85, 1, 'child_cat', 35, 'August 24, 2020 16:57:49', 'updated'),
-(86, 1, 'child_cat', 34, 'August 24, 2020 16:58:04', 'updated'),
-(87, 1, 'child_cat', 33, 'August 24, 2020 16:58:50', 'updated'),
-(88, 1, 'child_cat', 32, 'August 24, 2020 16:59:12', 'updated'),
-(89, 1, 'child_cat', 31, 'August 24, 2020 16:59:27', 'updated'),
-(90, 1, 'child_cat', 30, 'August 24, 2020 17:00:18', 'updated'),
-(91, 1, 'child_cat', 29, 'August 24, 2020 17:00:35', 'updated'),
-(92, 1, 'child_cat', 28, 'August 24, 2020 17:00:50', 'updated'),
-(93, 1, 'child_cat', 27, 'August 24, 2020 17:01:10', 'updated'),
-(94, 1, 'child_cat', 26, 'August 24, 2020 17:01:25', 'updated'),
-(95, 1, 'child_cat', 25, 'August 24, 2020 17:01:57', 'updated'),
-(96, 1, 'child_cat', 24, 'August 24, 2020 17:02:16', 'updated'),
-(97, 1, 'child_cat', 23, 'August 24, 2020 17:03:06', 'updated'),
-(98, 1, 'child_cat', 22, 'August 24, 2020 17:03:26', 'updated'),
-(99, 1, 'child_cat', 21, 'August 24, 2020 17:03:48', 'updated'),
-(100, 1, 'child_cat', 20, 'August 24, 2020 17:09:25', 'updated'),
-(101, 1, 'child_cat', 19, 'August 24, 2020 17:10:13', 'updated'),
-(102, 1, 'child_cat', 18, 'August 24, 2020 17:10:36', 'updated'),
-(103, 1, 'child_cat', 17, 'August 24, 2020 17:11:03', 'updated'),
-(104, 1, 'child_cat', 16, 'August 24, 2020 17:11:26', 'updated'),
-(105, 1, 'child_cat', 15, 'August 24, 2020 17:11:47', 'updated'),
-(106, 1, 'child_cat', 14, 'August 24, 2020 17:12:02', 'updated'),
-(107, 1, 'child_cat', 13, 'August 24, 2020 17:12:16', 'updated'),
-(108, 1, 'child_cat', 12, 'August 24, 2020 17:12:40', 'updated'),
-(109, 1, 'child_cat', 11, 'August 24, 2020 17:13:05', 'updated'),
-(110, 1, 'child_cat', 10, 'August 24, 2020 17:13:47', 'updated'),
-(111, 1, 'child_cat', 9, 'August 24, 2020 17:14:07', 'updated'),
-(112, 1, 'child_cat', 8, 'August 24, 2020 17:14:31', 'updated'),
-(113, 1, 'child_cat', 7, 'August 24, 2020 17:14:46', 'updated'),
-(114, 1, 'child_cat', 6, 'August 24, 2020 17:15:10', 'updated'),
-(115, 1, 'child_cat', 5, 'August 24, 2020 17:15:25', 'updated'),
-(116, 1, 'child_cat', 4, 'August 24, 2020 17:15:40', 'updated'),
-(117, 1, 'child_cat', 3, 'August 24, 2020 17:16:10', 'updated'),
-(118, 1, 'child_cat', 2, 'August 24, 2020 17:16:24', 'updated'),
-(119, 1, 'child_cat', 1, 'August 24, 2020 17:16:43', 'updated'),
-(120, 1, 'language_settings', 2, 'August 24, 2020 17:26:07', 'updated'),
-(121, 1, 'language_settings', 2, 'August 24, 2020 17:27:34', 'updated'),
-(122, 1, 'language_settings', 2, 'August 24, 2020 17:28:03', 'updated'),
-(123, 1, 'page', 1, 'August 24, 2020 17:29:07', 'updated'),
-(124, 1, 'page', 1, 'August 24, 2020 17:30:22', 'updated'),
-(125, 1, 'page', 1, 'August 24, 2020 17:31:20', 'updated'),
-(126, 1, 'page', 1, 'August 24, 2020 17:31:54', 'updated'),
-(127, 1, 'pages', 1, 'August 24, 2020 17:33:43', 'deleted'),
-(128, 1, 'term', 2, 'August 24, 2020 17:36:11', 'updated'),
-(129, 1, 'term', 2, 'August 24, 2020 17:36:33', 'updated'),
-(130, 1, 'term', 2, 'August 24, 2020 17:37:38', 'updated'),
-(131, 1, 'term', 2, 'August 24, 2020 17:38:04', 'updated');
 
 -- --------------------------------------------------------
 
@@ -288,7 +151,7 @@ CREATE TABLE `announcement_bar` (
 --
 
 INSERT INTO `announcement_bar` (`id`, `enable_bar`, `bg_color`, `text_color`, `bar_text`, `last_updated`, `language_id`) VALUES
-(1, 1, '#2ca35b', '#ffffff', '\nTest the top header option\n', '1597776166', 1);
+(1, 0, '#2ca35b', '#ffffff', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -378,13 +241,6 @@ CREATE TABLE `buyer_requests` (
   `isS3` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `buyer_requests`
---
-
-INSERT INTO `buyer_requests` (`request_id`, `seller_id`, `cat_id`, `child_id`, `request_title`, `request_description`, `request_file`, `delivery_time`, `request_budget`, `request_date`, `request_status`, `isS3`) VALUES
-(1, 3, 6, 66, 'test', 'test', '', '7 Days', '5', 'August 24, 2020', 'active', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -402,13 +258,6 @@ CREATE TABLE `buyer_reviews` (
   `review_date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `buyer_reviews`
---
-
-INSERT INTO `buyer_reviews` (`review_id`, `proposal_id`, `order_id`, `review_buyer_id`, `buyer_rating`, `buyer_review`, `review_seller_id`, `review_date`) VALUES
-(1, 5, 1, 3, 5, 'well done', 2, 'Aug 17 2020');
-
 -- --------------------------------------------------------
 
 --
@@ -425,15 +274,6 @@ CREATE TABLE `cart` (
   `revisions` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `coupon_used` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`cart_id`, `seller_id`, `proposal_id`, `proposal_price`, `proposal_qty`, `delivery_id`, `revisions`, `coupon_used`) VALUES
-(1, 2, 5, '10', 1, 2, '2', 0),
-(2, 1, 5, '10', 1, 2, '2', 0),
-(4, 1, 3, '12', 1, 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -612,15 +452,7 @@ INSERT INTO `cats_meta` (`id`, `cat_id`, `language_id`, `cat_title`, `cat_desc`)
 (5, 6, 1, 'Programming & Tech\r\n', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '),
 (6, 7, 1, 'Business\r\n', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '),
 (7, 8, 1, 'Fun & Lifestyle\r\n', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '),
-(8, 9, 1, 'Music & Audio', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '),
-(9, 1, 2, 'تصميم الرسومات', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(10, 2, 2, 'التسويق الرقمي', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(11, 3, 2, 'الكتابة والترجمة', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(12, 4, 2, 'الفيديو والرسوم المتحركة', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(13, 6, 2, 'البرمجة والتكنولوجيا', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(14, 7, 2, 'اعمال', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(15, 8, 2, 'المرح ونمط الحياة', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(16, 9, 2, 'الموسيقى والصوت', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.');
+(8, 9, 1, 'Music & Audio', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ');
 
 -- --------------------------------------------------------
 
@@ -731,97 +563,7 @@ INSERT INTO `child_cats_meta` (`id`, `child_id`, `child_parent_id`, `language_id
 (87, 91, 8, 1, 'Viral Videos', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'),
 (88, 92, 8, 1, 'Pranks & Stunts', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'),
 (89, 93, 8, 1, 'Celebrity Impersonators', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'),
-(90, 94, 8, 1, 'Other', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'),
-(91, 1, 1, 2, 'تصميم شعار', 'تصميم شعار'),
-(92, 2, 1, 2, 'بطاقات العمل والقرطاسية', 'بطاقات العمل والقرطاسية'),
-(93, 3, 1, 2, 'توضيح', 'توضيح'),
-(94, 4, 1, 2, 'كاريكاتير كاريكاتير', 'كاريكاتير كاريكاتير'),
-(95, 5, 1, 2, 'ملصقات النشرات', 'ملصقات النشرات'),
-(96, 6, 1, 2, 'أغلفة الكتب والتغليف', 'أغلفة الكتب والتغليف'),
-(97, 7, 1, 2, 'تصميم الويب والجوال', 'تصميم الويب والجوال'),
-(98, 8, 1, 2, 'تصميم مواقع التواصل الاجتماعي', 'تصميم مواقع التواصل الاجتماعي'),
-(99, 9, 1, 2, 'إعلانات البانر', 'إعلانات البانر'),
-(100, 10, 2, 2, 'تسويق وسائل الاعلام الاجتماعية', 'تسويق وسائل الاعلام الاجتماعية'),
-(101, 11, 6, 2, 'ووردبريس', 'ووردبريس'),
-(102, 12, 1, 2, 'تحرير فوتوشوب', 'تحرير فوتوشوب'),
-(103, 13, 1, 2, 'نماذج ثلاثية الأبعاد وثنائية الأبعاد', 'نماذج ثلاثية الأبعاد وثنائية الأبعاد'),
-(104, 14, 1, 2, 'قمصان', 'قمصان'),
-(105, 15, 1, 2, 'تصميم العروض التقديمية', 'تصميم العروض التقديمية'),
-(106, 16, 1, 2, 'آخر', 'آخر'),
-(107, 17, 2, 2, 'سيو', 'سيو'),
-(108, 18, 2, 2, 'حركة الويب', 'حركة الويب'),
-(109, 19, 2, 2, 'تسويق المحتوى', 'تسويق المحتوى'),
-(110, 20, 2, 2, 'تسويق الفيديو', 'تسويق الفيديو'),
-(111, 21, 2, 2, 'التسويق عبر البريد الإلكتروني', 'التسويق عبر البريد الإلكتروني'),
-(112, 22, 2, 2, 'البحث والتسويق على الشبكة الإعلانية', 'البحث والتسويق على الشبكة الإعلانية'),
-(113, 23, 2, 2, 'استراتيجية التسويق', 'استراتيجية التسويق'),
-(114, 24, 2, 2, 'تحليلات الويب', 'تحليلات الويب'),
-(115, 25, 2, 2, 'التسويق المؤثر', 'التسويق المؤثر'),
-(116, 26, 2, 2, 'القوائم المحلية', 'القوائم المحلية'),
-(117, 27, 2, 2, 'بحوث المجال', 'بحوث المجال'),
-(118, 28, 2, 2, 'تسويق التجارة الإلكترونية', 'تسويق التجارة الإلكترونية'),
-(119, 29, 2, 2, 'الإعلان المحمول', 'الإعلان المحمول'),
-(120, 30, 3, 2, 'السير الذاتية وخطابات التعريف', 'السير الذاتية وخطابات التعريف'),
-(121, 31, 3, 2, 'التدقيق اللغوي والتحرير', 'التدقيق اللغوي والتحرير'),
-(122, 32, 3, 2, 'ترجمة', 'ترجمة'),
-(123, 33, 3, 2, 'كتابة إبداعية', 'كتابة إبداعية'),
-(124, 34, 3, 2, 'كتابة الأعمال', 'كتابة الأعمال'),
-(125, 35, 3, 2, 'الأبحاث والملخصات', 'الأبحاث والملخصات'),
-(126, 36, 3, 2, 'مقالات ومنشورات المدونة', 'مقالات ومنشورات المدونة'),
-(127, 37, 3, 2, 'تصريحات صحفيه', 'تصريحات صحفيه'),
-(128, 38, 3, 2, 'النسخ', 'النسخ'),
-(129, 39, 3, 2, 'الكتابة القانونية', 'الكتابة القانونية'),
-(130, 40, 3, 2, 'آخر', 'آخر'),
-(131, 41, 4, 2, 'السبورة ومقاطع الفيديو التوضيحية', 'السبورة ومقاطع الفيديو التوضيحية'),
-(132, 42, 4, 2, 'مقدمات وشعارات متحركة', 'مقدمات وشعارات متحركة'),
-(133, 43, 4, 2, 'مقاطع الفيديو الترويجية والعلامات التجارية', 'مقاطع الفيديو الترويجية والعلامات التجارية'),
-(134, 44, 4, 2, 'التحرير وما بعد الإنتاج', 'التحرير وما بعد الإنتاج'),
-(135, 45, 4, 2, 'كلمات الأغاني والموسيقى والفيديو', 'كلمات الأغاني والموسيقى والفيديو'),
-(136, 46, 4, 2, 'المتحدثون الرسميون والشهادات', 'المتحدثون الرسميون والشهادات'),
-(137, 48, 4, 2, 'آخر', 'آخر'),
-(138, 49, 9, 2, 'التعليق الصوتي', 'التعليق الصوتي'),
-(139, 50, 9, 2, 'الخلط والاتقان', 'الخلط والاتقان'),
-(140, 51, 9, 2, 'المنتجون والملحنون', 'المنتجون والملحنون'),
-(141, 52, 9, 2, 'المغني وكتاب الأغاني', 'المغني وكتاب الأغاني'),
-(142, 53, 9, 2, 'الموسيقيون والمغنون الدورة', 'الموسيقيون والمغنون الدورة'),
-(143, 54, 9, 2, 'الأناشيد وقطرات', 'الأناشيد وقطرات'),
-(144, 55, 9, 2, 'مؤثرات صوتية', 'مؤثرات صوتية'),
-(145, 56, 6, 2, 'برمجة الويب', 'برمجة الويب'),
-(146, 58, 6, 2, 'بناة مواقع الويب ونظام إدارة المحتوى', 'بناة مواقع الويب ونظام إدارة المحتوى'),
-(147, 60, 6, 2, 'التجارة الإلكترونية', 'التجارة الإلكترونية'),
-(148, 61, 6, 2, 'تطبيقات الجوال والويب', 'تطبيقات الجوال والويب'),
-(149, 62, 6, 2, 'تطبيقات سطح المكتب', 'تطبيقات سطح المكتب'),
-(150, 63, 6, 2, 'الدعم وتكنولوجيا المعلومات', 'الدعم وتكنولوجيا المعلومات'),
-(151, 64, 6, 2, 'روبوتات المحادثة', 'روبوتات المحادثة'),
-(152, 65, 6, 2, 'تحليل البيانات والتقارير', 'تحليل البيانات والتقارير'),
-(153, 66, 6, 2, 'تحويل ملفات', 'تحويل ملفات'),
-(154, 67, 6, 2, 'قواعد بيانات', 'قواعد بيانات'),
-(155, 68, 6, 2, 'اختبار المستخدم', 'اختبار المستخدم'),
-(156, 69, 6, 2, 'آخر', 'آخر'),
-(157, 70, 7, 2, 'مساعد افتراضي', 'مساعد افتراضي'),
-(158, 71, 7, 2, 'البحث عن المتجر', 'البحث عن المتجر'),
-(159, 72, 7, 2, 'خطط العمل', 'خطط العمل'),
-(160, 73, 7, 2, 'خدمات العلامات التجارية', 'خدمات العلامات التجارية'),
-(161, 74, 7, 2, 'استشارة مالية', 'استشارة مالية'),
-(162, 75, 7, 2, 'استشارة مالية', 'استشارة مالية'),
-(163, 76, 7, 2, 'نصائح تجارية', 'نصائح تجارية'),
-(164, 77, 7, 2, 'العروض', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(165, 78, 7, 2, 'نصيحة مهنية', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(166, 79, 7, 2, 'توزيع النشرات', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(167, 80, 7, 2, 'اخرى', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(168, 81, 8, 2, 'دروس عبر الإنترنت', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(169, 82, 8, 2, 'الفنون والحرف', 'الفنون والحرف\r\nهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(170, 83, 8, 2, 'نصيحة العلاقة', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(171, 84, 8, 2, 'الصحة والتغذية واللياقة البدنية', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(172, 85, 8, 2, 'علم التنجيم والقراءات', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(173, 86, 8, 2, 'الشفاء الروحي', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(174, 87, 8, 2, 'الأسرة وعلم الأنساب', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(175, 88, 8, 2, 'المقتنيات', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(176, 89, 8, 2, 'بطاقات المعايدة ومقاطع الفيديو', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(177, 91, 8, 2, 'أشرطة الفيديو الفيروسية', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(178, 92, 8, 2, 'المزح والأعمال المثيرة', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(179, 93, 8, 2, 'منتحلو المشاهير', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.'),
-(180, 94, 8, 2, 'آخر', 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.');
+(90, 94, 8, 1, 'Other', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.');
 
 -- --------------------------------------------------------
 
@@ -1462,14 +1204,6 @@ CREATE TABLE `favorites` (
   `proposal_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `favorites`
---
-
-INSERT INTO `favorites` (`favourite_id`, `seller_id`, `proposal_id`) VALUES
-(1, 3, 5),
-(10, 1, 8);
-
 -- --------------------------------------------------------
 
 --
@@ -1481,20 +1215,6 @@ CREATE TABLE `featured_proposals` (
   `proposal_id` int(10) NOT NULL,
   `end_date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `featured_proposals`
---
-
-INSERT INTO `featured_proposals` (`featured_id`, `proposal_id`, `end_date`) VALUES
-(18, 9, 'September 24, 2020 11:10:11'),
-(19, 8, 'September 24, 2020 11:10:21'),
-(20, 7, 'September 24, 2020 11:10:30'),
-(21, 6, 'September 24, 2020 11:10:42'),
-(22, 2, 'September 24, 2020 11:11:04'),
-(23, 5, 'September 24, 2020 11:11:11'),
-(24, 4, 'September 24, 2020 11:11:17'),
-(25, 3, 'September 24, 2020 11:11:25');
 
 -- --------------------------------------------------------
 
@@ -1516,44 +1236,25 @@ CREATE TABLE `footer_links` (
 --
 
 INSERT INTO `footer_links` (`link_id`, `language_id`, `icon_class`, `link_title`, `link_url`, `link_section`) VALUES
-(1, 1, '', 'Graphics &amp; Design', './categories/graphics-design', 'categories'),
-(2, 1, '', 'Digital Marketing', './categories/digital-marketing', 'categories'),
-(3, 1, '', 'Writing &amp; Translation', './categories/writing-translation', 'categories'),
-(4, 1, '', 'Video &amp; Animation', './categories/video-animation', 'categories'),
-(5, 1, '', 'Music &amp; Audio', './categories/music-audio', 'categories'),
-(6, 1, '', 'Programming &amp; Tech', './categories/programming-tech', 'categories'),
-(7, 1, '', 'Business', './categories/business', 'categories'),
-(8, 1, '', 'Fun &amp; Lifestyle', './categories/fun-lifestyle', 'categories'),
-(9, 1, 'fa-file-text-o', 'Terms &amp; Conditions', './terms_and_conditions', 'about'),
+(1, 1, '', 'Graphics &amp; Design', '/categories/graphics-design', 'categories'),
+(2, 1, '', 'Digital Marketing', '/categories/digital-marketing', 'categories'),
+(3, 1, '', 'Writing & Translation\r\n', '/categories/writing-translation', 'categories'),
+(4, 1, '', 'Video & Animation\r\n', '/categories/video-animation', 'categories'),
+(5, 1, '', 'Music & Audio\r\n', '/categories/music-audio', 'categories'),
+(6, 1, '', 'Programming & Tech\r\n', '/categories/programming-tech', 'categories'),
+(7, 1, '', 'Business\r\n', '/categories/business', 'categories'),
+(8, 1, '', 'Fun & Lifestyle\r\n', '/categories/fun-lifestyle', 'categories'),
+(9, 1, 'fa-file-text-o', 'Terms & Conditions', '/terms_and_conditions', 'about'),
 (10, 1, 'fa-google-plus-official', 'fa-google-plus-official', '#', 'follow'),
 (11, 1, 'fa-twitter', '', '#', 'follow'),
 (12, 1, 'fa-facebook', '', '#', 'follow'),
 (13, 1, 'fa-linkedin', '', '#', 'follow'),
 (14, 1, 'fa-pinterest', '', '#', 'follow'),
-(15, 1, 'fa fa-life-ring', 'Customer Support', './customer_support', 'about'),
-(16, 1, 'fa-question-circle', 'How It Works', './how-it-works', 'about'),
-(17, 1, 'fa-book', 'Knowledge Bank', './knowledge_bank/', 'about'),
-(18, 1, 'fa-rss', 'Blog', './blog/', 'about'),
-(19, 1, 'fa fa-comments-o', 'Feedback', './feedback/', 'about'),
-(20, 2, '', 'تصميم الرسومات', 'التصنيفات', 'categories'),
-(21, 2, '', 'التسويق الرقمي', 'التصنيفات', 'categories'),
-(22, 2, '', 'الكتابة والترجمة', 'التصنيفات', 'categories'),
-(23, 2, '', 'الفيديو والرسوم المتحركة', 'التصنيفات', 'categories'),
-(24, 2, '', 'الموسيقى والصوت', 'التصنيفات', 'categories'),
-(25, 2, '', 'البرمجة والتكنولوجيا', 'التصنيفات', 'categories'),
-(26, 2, '', 'اعمال', 'التصنيفات', 'categories'),
-(27, 2, '', 'المرح ونمط الحياة', 'التصنيفات', 'categories'),
-(28, 2, 'fa-file-text-o', 'الشروط والأحكام', './terms_and_conditions', 'about'),
-(29, 2, 'fa fa-life-ring', 'دعم العملاء', './customer_support', 'about'),
-(30, 2, 'fa-question-circle', 'كيف تعمل', './how-it-works', 'about'),
-(31, 2, 'fa-book', 'بنك المعرفة', './knowledge_bank/', 'about'),
-(32, 2, 'fa-rss', 'مدونة', './blog/', 'about'),
-(33, 2, 'fa fa-comments-o', 'ردود الفعل', './feedback/', 'about'),
-(34, 2, 'fa-google-plus-official', '', '#', 'follow'),
-(35, 2, 'fa-twitter', '', '#', 'follow'),
-(36, 2, 'fa-facebook', '', '#', 'follow'),
-(37, 2, 'fa-linkedin', '', '#', 'follow'),
-(38, 2, 'fa-pinterest', '', '#', 'follow');
+(15, 1, 'fa fa-life-ring', 'Customer Support', '/customer_support', 'about'),
+(16, 1, 'fa-question-circle', 'How It Works', '/how-it-works', 'about'),
+(17, 1, 'fa-book', 'Knowledge Bank', '/knowledge_bank/', 'about'),
+(18, 1, 'fa-rss', 'Blog', '/blog/', 'about'),
+(19, 1, 'fa fa-comments-o', 'Feedback', '/feedback/', 'about');
 
 -- --------------------------------------------------------
 
@@ -1631,7 +1332,7 @@ CREATE TABLE `general_settings` (
 --
 
 INSERT INTO `general_settings` (`id`, `site_title`, `site_www`, `site_name`, `site_favicon`, `site_logo_type`, `site_logo_text`, `site_logo_image`, `enable_mobile_logo`, `site_mobile_logo`, `site_logo`, `site_favicon_s3`, `site_logo_image_s3`, `site_mobile_logo_s3`, `site_logo_s3`, `site_watermark`, `google_analytics`, `site_color`, `site_hover_color`, `site_border_color`, `site_desc`, `site_keywords`, `site_author`, `site_url`, `site_email_address`, `site_copyright`, `site_timezone`, `language_switcher`, `tinymce_api_key`, `recaptcha_site_key`, `recaptcha_secret_key`, `enable_social_login`, `fb_app_id`, `fb_app_secret`, `g_client_id`, `g_client_secret`, `jwplayer_code`, `level_one_rating`, `level_one_orders`, `level_two_rating`, `level_two_orders`, `level_top_rating`, `level_top_orders`, `approve_proposals`, `edited_proposals`, `disable_local_video`, `proposal_email`, `revisions_list`, `enable_unlimited_revisions`, `signup_email`, `relevant_requests`, `enable_referrals`, `knowledge_bank`, `referral_money`, `site_currency`, `currency_position`, `currency_format`, `enable_maintenance_mode`, `order_auto_complete`, `wish_do_manual_payouts`, `payouts_date`, `payouts_anyday`) VALUES
-(1, 'Miver  - Freelance MarketPlace', 1, 'Miver  - Freelance MarketPlace', 'gigtodoFav.ico', 'image', '', 'logo.png', 1, 'mobile-logo.png', 'logo1.png', 0, 0, 0, 0, 'watermark.png', '', '#2ca35b', '#2ca35b', '#2ca35b', 'sfsdfs', 'sdf', 'sdfsd', 'https://www.webartinfo.com/themeforest/miver/', 'iamsewak@gmail.com', '', 'America/Chicago', 1, '', '', '', 'no', '', '', '', '', '', 85, 10, 95, 25, 100, 50, 'yes', 0, 0, 'yes', '', 0, 'yes', 'yes', 'yes', 'yes', 1, '22', 'left', 'us', 'no', 2, 1, '', 0);
+(1, '', 1, '', 'gigtodoFav.ico', 'image', '', 'logo1.png', 1, 'mobile-logo.png', 'logo1.png', 0, 0, 0, 0, 'watermark.png', '', '#2ca35b', '#2ca35b', '#2ca35b', '', '', '', '', '', '', 'America/Chicago', 1, '', '', '', 'no', '', '', '', '', '', 85, 10, 95, 25, 100, 50, 'yes', 0, 0, 'yes', '', 0, 'yes', 'yes', 'yes', 'yes', 1, '22', 'left', 'us', 'no', 2, 1, '', 0);
 
 -- --------------------------------------------------------
 
@@ -1770,15 +1471,6 @@ CREATE TABLE `inbox_sellers` (
   `message_status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `inbox_sellers`
---
-
-INSERT INTO `inbox_sellers` (`inbox_seller_id`, `message_group_id`, `message_id`, `offer_id`, `sender_id`, `receiver_id`, `popup`, `time`, `message_status`) VALUES
-(1, 1087020824, 0, 0, 1, 1, 0, 0, 'empty'),
-(2, 1716892937, 0, 0, 3, 2, 0, 0, 'empty'),
-(3, 1393817581, 0, 0, 3, 1, 0, 0, 'empty');
-
 -- --------------------------------------------------------
 
 --
@@ -1793,21 +1485,6 @@ CREATE TABLE `instant_deliveries` (
   `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isS3` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `instant_deliveries`
---
-
-INSERT INTO `instant_deliveries` (`id`, `proposal_id`, `enable`, `message`, `file`, `isS3`) VALUES
-(1, 1, 1, 'Deal Message', 'bg_1596384610.jpg', 0),
-(2, 2, 0, 'proposal Message', 'bg_1596385924.jpg', 0),
-(3, 3, 1, 'I will make you an awesome logo', '6bandwale_1596611271.png', 0),
-(4, 4, 0, 'No', 'Screenshot-2014-11-11-20.26_1596543524.png', 0),
-(5, 5, 0, 'Are you lonely? looking for love; searching for a connection, but repeatedly get rejected. \r\n\r\nAre you unsuccessful in keeping a relationship for up to, say, a week? Does love seem like a myth to you? Are you so lost, and saddened by the thought that you might spend the rest of your life ... Alone.\r\n\r\nIf your answer is yes to any of the above, you are in the right place.\r\n\r\nI house a unique set of skills that allows me, no, that completely equips me to trigger a change; help you find and keep that special connection. That special someone - that special love. I can make it such that you find someone that...their every touch, warmth, smell, and every single part of them will be all you think about. With me, you are guaranteed to find love.', 'silhouette-photography-of-man-and-woman-1759823_1576257266_1596878186.png', 0),
-(6, 6, 0, '', '', 0),
-(7, 7, 1, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1200px-Arabic-Language-Flag.svg_1598280953.png', 0),
-(8, 8, 1, 'My E-book contains many valuable and insightful knowledge on best business practices and steps to becoming an incrdedible entrporenuer. I am a writer by profession with so many successes under my belt. Please read my e-book and tell me what you think.', '1200px-Arabic-Language-Flag.svg_1598281182.png', 0),
-(9, 9, 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1851,8 +1528,7 @@ CREATE TABLE `languages` (
 --
 
 INSERT INTO `languages` (`id`, `title`, `image`, `default_lang`, `direction`, `isS3`) VALUES
-(1, 'English', 'english.png', 1, 'left', 0),
-(2, 'العربية', '1200px-Arabic-Language-Flag.svg.png', 0, 'right', 0);
+(1, 'English', 'english.png', 1, 'left', 0);
 
 -- --------------------------------------------------------
 
@@ -1866,16 +1542,6 @@ CREATE TABLE `languages_relation` (
   `language_id` int(11) NOT NULL,
   `language_level` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `languages_relation`
---
-
-INSERT INTO `languages_relation` (`relation_id`, `seller_id`, `language_id`, `language_level`) VALUES
-(1, 2, 1, 'basic'),
-(3, 3, 2, 'Fluent'),
-(5, 3, 3, 'Fluent'),
-(6, 1, 2, 'basic');
 
 -- --------------------------------------------------------
 
@@ -1909,14 +1575,6 @@ CREATE TABLE `my_buyers` (
   `last_order_date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `my_buyers`
---
-
-INSERT INTO `my_buyers` (`id`, `seller_id`, `buyer_id`, `completed_orders`, `amount_spent`, `last_order_date`) VALUES
-(1, 2, 3, 1, 10, 'August 17, 2020'),
-(2, 1, 3, 1, 10, 'September 04, 2020');
-
 -- --------------------------------------------------------
 
 --
@@ -1931,14 +1589,6 @@ CREATE TABLE `my_sellers` (
   `amount_spent` int(10) NOT NULL,
   `last_order_date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `my_sellers`
---
-
-INSERT INTO `my_sellers` (`id`, `buyer_id`, `seller_id`, `completed_orders`, `amount_spent`, `last_order_date`) VALUES
-(1, 3, 2, 1, 10, 'August 17, 2020'),
-(2, 3, 1, 1, 10, 'September 04, 2020');
 
 -- --------------------------------------------------------
 
@@ -1956,29 +1606,6 @@ CREATE TABLE `notifications` (
   `bell` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `notifications`
---
-
-INSERT INTO `notifications` (`notification_id`, `receiver_id`, `sender_id`, `order_id`, `reason`, `date`, `bell`, `status`) VALUES
-(1, 1, 'admin_1', 2, 'approved', 'August 02, 2020', 'over', 'unread'),
-(2, 2, 'admin_1', 3, 'approved', 'August 04, 2020', 'over', 'unread'),
-(3, 2, 'admin_1', 4, 'approved', 'August 04, 2020', 'over', 'unread'),
-(4, 2, 'admin_1', 5, 'approved', 'August 08, 2020', 'over', 'unread'),
-(5, 2, '3', 1, 'order', 'August 17, 2020', 'over', 'read'),
-(6, 3, '2', 1, 'order_message', '06:43: August 17, 2020', 'over', 'read'),
-(7, 2, '3', 1, 'order_message', '06:44: August 17, 2020', 'over', 'read'),
-(8, 3, '2', 1, 'order_delivered', 'August 17, 2020', 'over', 'read'),
-(9, 2, '3', 1, 'order_completed', 'August 17, 2020', 'over', 'unread'),
-(10, 2, '3', 1, 'buyer_order_review', 'August 17, 2020', 'over', 'read'),
-(11, 3, '2', 1, 'seller_order_review', 'August 17, 2020', 'over', 'read'),
-(12, 3, 'admin_1', 1, 'approved_request', 'August 24, 2020', 'over', 'read'),
-(13, 3, 'admin_1', 6, 'approved', 'August 24, 2020', 'over', 'unread'),
-(14, 3, 'admin_1', 8, 'approved', 'August 24, 2020', 'over', 'unread'),
-(15, 3, 'admin_1', 7, 'approved', 'August 24, 2020', 'over', 'unread'),
-(16, 3, 'admin_1', 9, 'approved', 'August 24, 2020', 'over', 'read'),
-(17, 1, '3', 2, 'order', 'September 04, 2020', 'over', 'unread');
 
 -- --------------------------------------------------------
 
@@ -2006,14 +1633,6 @@ CREATE TABLE `orders` (
   `order_status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`order_id`, `order_number`, `order_duration`, `order_time`, `order_date`, `order_revisions`, `order_revisions_used`, `order_description`, `seller_id`, `buyer_id`, `proposal_id`, `order_price`, `order_qty`, `order_fee`, `order_active`, `complete_time`, `order_status`) VALUES
-(1, '1401253045', '2 Days', 'Aug 19, 2020 11:44:30', 'August 17, 2020', '2', 0, '', 2, 3, 5, '10', 1, '0', 'no', 'Aug 19, 2020 06:47:24', 'completed'),
-(2, '1038972185', '1 Day', 'Sep 05, 2020 10:38:19', 'September 04, 2020', '0', 0, '', 1, 3, 2, '10', 1, '0', 'yes', '', 'progress');
-
 -- --------------------------------------------------------
 
 --
@@ -2033,15 +1652,6 @@ CREATE TABLE `order_conversations` (
   `watermark_file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isS3` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `order_conversations`
---
-
-INSERT INTO `order_conversations` (`c_id`, `order_id`, `sender_id`, `message`, `file`, `date`, `reason`, `status`, `watermark`, `watermark_file`, `isS3`) VALUES
-(1, 1, 2, 'start', '', '06:43: August 17, 2020', '', 'message', 0, '', 0),
-(2, 1, 3, 'start', '', '06:44: August 17, 2020', '', 'message', 0, '', 0),
-(3, 1, 2, 'done', '', '06:08: August 17 2020', '', 'message', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2084,15 +1694,6 @@ CREATE TABLE `package_attributes` (
   `attribute_value` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `package_attributes`
---
-
-INSERT INTO `package_attributes` (`attribute_id`, `proposal_id`, `package_id`, `attribute_name`, `attribute_value`) VALUES
-(1, 5, 13, 'Last Price', '4'),
-(2, 5, 14, 'Last Price', '5'),
-(3, 5, 15, 'Last Price', '10');
-
 -- --------------------------------------------------------
 
 --
@@ -2107,16 +1708,6 @@ CREATE TABLE `pages` (
   `language_id` int(10) NOT NULL,
   `date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pages`
---
-
-INSERT INTO `pages` (`id`, `title`, `url`, `content`, `language_id`, `date`) VALUES
-(2, 'About Us', 'about', '\n<p>Soon</p>\n', 1, 'August 24, 2020'),
-(3, 'عنا', '%D8%B9%D9%86%D8%A7', '\n<p>&#1602;&#1585;&#1610;&#1576;&#1575;</p>\n', 2, 'August 24, 2020'),
-(4, 'Contact us', 'contact', '\n<p>soon</p>\n', 1, 'August 24, 2020'),
-(5, 'تواصل معنا', '%D8%AA%D9%88%D8%A7%D8%B5%D9%84', '\n<p>&#1602;&#1585;&#1610;&#1576;&#1575;</p>\n', 2, 'August 24, 2020');
 
 -- --------------------------------------------------------
 
@@ -2236,13 +1827,6 @@ CREATE TABLE `posts` (
   `status` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `title`, `cat_id`, `author`, `image`, `content`, `date_time`, `isS3`, `language_id`, `status`) VALUES
-(1, '21 Tips for First-Time Freelancers', '1', 'Black Smith', 'Freelancer_10-24-18_Holy_Grail.jpg', '\n<p><b>1 - Understand your target market</b></p><p>Before you can start to find freelance work, you need to make sure you know who your potential clients will be. Understanding your prospective client base will help you to plan your pricing structure, implement your marketing strategy and focus your time and energy.</p><p><br></p><p><b>2 - Be flexible</b></p><p>When you set up as a solopreneur, you might have a fixed view on how you will be running your micro-business. Our advice is to be as flexible as possible at the beginning. Services that you thought would be wildly popular may turn out to be duds, whereas others might be surprisingly in demand.</p><p><br></p><p><b>3 - Be clear on costs</b></p><p>Make sure you have a clear idea about your costs and pricing structure. Will you be charging on an hourly or project basis? Do your market research to ensure that you are in line with your competitors.</p><p><br></p><p><b>4 - Get compliant</b></p><p>Going freelance is a huge step so don&rsquo;t make things harder in the future by skipping important steps at the start. Whether you&rsquo;re setting up as a sole trader or a business, make sure you are registered with the correct governing bodies.</p><p><b>5 - Build a website</b></p><p>Having a website provides an invaluable window into your business. You can build your own using simple templates from sites like Wix or Squarespace.</p><p><br></p><p><b>6 - Make a good first impression</b></p><p>Having well-presented and engaging social media accounts is a must. It&rsquo;s likely to be one of the first things that your potential clients will look at.</p><p><br></p><p><b>7 - Go to market</b></p><p>Be confident in your skills and abilities. Don&rsquo;t be afraid to put yourself out there on freelance platforms and freelance job websites.</p><p><br></p><p><b>8 - Stay motivated</b></p><p>Set yourself goals to stay motivated. These could be financial such as &lsquo;I want to be earning &pound;X per month&rsquo;, or it could be to &lsquo;reach 1000 followers on Instagram&rsquo;. When your focus is wavering, remind yourself of your targets</p><p><br></p><p><b>9 - Get busy</b></p><p>Design yourself a professional stack of business cards on a site like Canva and keep some in every pocket or handbag. You never know when a freelancing opportunity might arise!</p><p><br></p><p><b>10 - Investigate E-Residency</b></p><p>Are you encountering too much red tape in your home country? Consider joining the digital nation and registering as an e-resident in Estonia. Being a cross-border business may help you to grasp new and unforeseen opportunities.</p><p><br></p><p><b>11 - Consider Xolo</b></p><p>Don&rsquo;t get tied up with paperwork and consider using a supportive freelance platform like Xolo. It means you don&rsquo;t have to become an accountant or a lawyer as well as a freelancer &mdash; Xolo will take care of all that for you.</p><p><br></p><p><b>12 - Don&rsquo;t be a jack of all trades</b></p><p>Solopreneurs who focus on a small set of freelance services are likely to out-compete those who can do everything. Become an expert in your field.</p><p><br></p><p><b>13 - Stay knowledgeable</b></p><p>Stay up to date with new trends by reading relevant trade media, engaging with fellow freelancers on LinkedIn, attending sector-specific networking events or even doing some online training courses through sites like SkillShare and Digital Strategy School.</p><p><br></p><p><b>14 - Register with freelance job websites</b></p><p>There are many jobs portals and freelance job websites out there like Bark, Upwork or People Per Hour. Start responding to people&rsquo;s requests and those freelancing jobs will soon come pouring in.</p><p><br></p><p><b>15 - Start networking</b></p><p>Becoming a freelancer does have some drawbacks like feeling isolated and missing your office &lsquo;crew&rsquo;. Find a local networking group who you can share ideas with and get support from. Not one in your local area? Set up your own!</p><p><br></p><p><b>16 - Get organised</b></p><p>Make sure you are managing your time effectively, tracking those all-important leads and keeping on top of invoices using one of the many organisational freelance platforms out there like QuickBooks, Todoist and Pipedrive.</p><p><br></p><p><b>17 - Focus on relationships</b></p><p>Winning new business can be exhilarating and rewarding but don&rsquo;t neglect clients who you are already working with. Build your relationships and make every client feel like a priority.</p><p><br></p><p><b>18 - Set work boundaries</b></p><p>Being a solopreneur can give you much more flexibility with your family and friends. However, it can also result in late nights and unproductivity. Try to specify when you will be working and stick to it.</p><p><br></p><p><b>19 - Be upfront</b></p><p>Most clients will be genuine but protect yourself by asking for upfront deposits before you start big projects.</p><p><br></p><p><b>20 - Find your space</b></p><p>This could be your kitchen table, your local library, a cosy coffee shop or a fancy coworking space. Wherever it is, make it productive so you can provide the best possible freelance services.</p><p><br></p><p><b>21 - Try, try and try again</b></p><p>Becoming a freelancer has many ups and downs. Some days will be hard but learn from them and keep going. The journey to becoming a successful solopreneur will not be without its challenges!</p>\n', 'August 16, 2020', 0, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -2257,13 +1841,6 @@ CREATE TABLE `post_categories` (
   `date_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isS3` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `post_categories`
---
-
-INSERT INTO `post_categories` (`id`, `cat_name`, `cat_image`, `cat_creator`, `date_time`, `isS3`) VALUES
-(1, 'Miver Tips', 'box.png', '', 'August 16, 2020', 0);
 
 -- --------------------------------------------------------
 
@@ -2320,21 +1897,6 @@ CREATE TABLE `proposals` (
   `proposal_status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `proposals`
---
-
-INSERT INTO `proposals` (`proposal_id`, `proposal_title`, `proposal_url`, `proposal_cat_id`, `proposal_child_id`, `proposal_price`, `proposal_img1`, `proposal_img2`, `proposal_img3`, `proposal_img4`, `proposal_video`, `proposal_img1_s3`, `proposal_img2_s3`, `proposal_img3_s3`, `proposal_img4_s3`, `proposal_video_s3`, `proposal_desc`, `buyer_instruction`, `proposal_tags`, `proposal_enable_referrals`, `proposal_referral_money`, `proposal_referral_code`, `proposal_featured`, `proposal_toprated`, `proposal_seller_id`, `delivery_id`, `proposal_revisions`, `level_id`, `language_id`, `proposal_rating`, `proposal_views`, `proposal_status`) VALUES
-(1, 'Logo test proposal ', 'logo-test-proposal', 1, 13, '20', 'bg_1596384640.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p>Test</p>\n', '', 'HTML', 'no', 0, '', 'no', '', 1, 1, '1', 1, 1, 0, 0, 'draft'),
-(2, 'Proposal  test', 'proposal-test', 2, 17, '0', 'bg_1596385953.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p>proposals&nbsp;<br></p><h5 class=\"font-weight-normal\" style=\'font-family: \"Graphik Webfont\", -apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Segoe UI\", Helvetica, Arial, sans-serif; color: rgb(34, 34, 34);\'>Description</h5>\n', '', 'test', 'no', 0, '', 'yes', '', 1, 1, '0', 1, 1, 0, 82, 'active'),
-(3, 'I will make you an awesome logo', 'i-will-make-you-an-awesome-logo', 1, 1, '12', '6bandwale_1596611295.png', '', 'vid_1596611300.png', '', '', 0, 0, 0, 0, 0, '\n<p>Test</p>\n', '', 'test ,bestproject', 'no', 0, '', 'yes', '', 2, 1, '0', 1, 1, 0, 230, 'active'),
-(4, 'I will design you a logo ', 'i-will-design-you-a-logo', 3, 37, '0', 'Screenshot-2014-11-11-20.26_1596543561.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<h5 class=\"font-weight-normal\" style=\"color: rgb(34, 34, 34);\">Test Description</h5><h5 class=\"font-weight-normal\" style=\"color: rgb(34, 34, 34);\"><br></h5>\n', 'Tell your buyer what you need to get started (Optional)\r\n', 'Https', 'no', 0, '', 'yes', '', 2, 1, '0', 1, 1, 0, 50, 'active'),
-(5, 'Configuracoin de Windows sErver', 'configuracoin-de-windows-server', 1, 9, '0', 'silhouette-photography-of-man-and-woman-1759823_1576257266_1596878347.png', 'Screenshot_2_1596878373.png', 'Screenshot_3_1596878383.png', 'Screenshot_2_1596878396.png', '', 0, 0, 0, 0, 0, '\n<p style=\"font-size: 16px; color: rgb(34, 34, 34); line-height: 28px !important;\">I WILL BE YOUR&nbsp;<span style=\"background-color: rgb(255, 255, 0); line-height: 28px !important;\">EBOOK WRITER AND CONTENT WRITING</span></p><p style=\"font-size: 16px; color: rgb(34, 34, 34); line-height: 28px !important;\">Do you wish to have your book written by a professional ghostwriter? You know your book deserves great content. Search no further!</p><p style=\"font-size: 16px; color: rgb(34, 34, 34); line-height: 28px !important;\">My name is Ellen, I am a seasoned freelance writer with a great of experience writing ebooks and that makes me the perfect ebook writer for your ebook writings. I will write a well detailed and professionally research ebook.&nbsp;</p><p style=\"font-size: 16px; color: rgb(34, 34, 34); line-height: 28px !important;\">My ebook writing gig has the following perks:</p>\n', 'My name is Ellen, I am a seasoned freelance writer with a great of experience writing ebooks and that makes me the perfect ebook writer for your ebook writings. I will write a well detailed and professionally research ebook. ', 'test,html,new,project', 'yes', 20, '', 'yes', '1', 2, 1, '0', 1, 1, 5, 200, 'active'),
-(6, 'I Will Record Your Brazilian Portuguese Voice Over', 'i-will-record-your-brazilian-portuguese-voice-over', 9, 49, '0', 'voice-over-1_1598280784.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p><span style=\'color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Segoe UI\", Helvetica, Arial, sans-serif; font-size: 16px;\'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span><br></p>\n', 'Send me your script', 'voice', 'no', 0, '', 'yes', '1', 3, 1, '0', 1, 2, 0, 7, 'active'),
-(7, 'I Will Create A Professional Custom Explainer Video', 'i-will-create-a-professional-custom-explainer-video', 4, 41, '10', 'videosales-1_1598281017.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p><span style=\'color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Segoe UI\", Helvetica, Arial, sans-serif; font-size: 16px;\'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span><br></p>\n', '', 'video', 'yes', 10, '', 'yes', '1', 3, 1, '2', 1, 2, 0, 0, 'active'),
-(8, 'E-book on how to be a successful entreprenuer', 'e-book-on-how-to-be-a-successful-entreprenuer', 3, 36, '20', 'fall-3723738_1920_1588260783_1598281227.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p><span style=\'color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Segoe UI\", Helvetica, Arial, sans-serif; font-size: 16px;\'>My E-book contains many valuable and insightful knowledge on best business practices and steps to becoming an incrdedible entrporenuer. I am a writer by profession with so many successes under my belt. Please read my e-book and tell me what you think.</span><br></p>\n', '', 'Writing', 'no', 0, '', 'yes', '1', 3, 3, '8', 1, 2, 0, 17, 'active'),
-(9, 'I will design a perfect logo for your company', 'i-will-design-a-perfect-logo-for-your-company', 1, 1, '0', 'logo-1_1598281529.png', '', '', '', '', 0, 0, 0, 0, 0, '\n<p style=\'font-size: 16px; color: rgb(34, 34, 34); font-family: -apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Segoe UI\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'><span style=\'font-size: 14px; color: rgb(85, 85, 85); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'>Hello friends! I will convert your photos into beautiful artistic Grunge painting effect.</span><br style=\'font-size: 14px; color: rgb(85, 85, 85); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'><br style=\'font-size: 14px; color: rgb(85, 85, 85); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'></p><div style=\'font-size: 14px; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'><br style=\"line-height: 28px !important; font-size: 16px !important;\"></div><div style=\'font-size: 14px; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important;\'><span style=\'font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'>Hello friends! I will convert your photos into beautiful artistic Grunge painting effect.</span><br style=\'font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'><br style=\'font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'><div style=\'border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'>Here you can sent me your favorite photo</div><div style=\'border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'>&nbsp;of portrait or landscape or your pet</div><div style=\'border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'>and I will draw a beautiful&nbsp; artistic&nbsp; Draw</div><div style=\'border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: ProximaNova, \"Helvetica Neue\", Helvetica, Arial, sans-serif; line-height: 28px !important; font-size: 16px !important;\'>&nbsp;painting .The painting&nbsp; style is like the pictures above,&nbsp;<br style=\"line-height: 28px !important;\"><br style=\"line-height: 28px !important;\"><div style=\"border: 0px; outline: 0px; vertical-align: baseline; background: 0px 0px; line-height: 28px !important;\">Please make sure that the photo you send is of high resolution.</div><div style=\"border: 0px; outline: 0px; vertical-align: baseline; background: 0px 0px; line-height: 28px !important;\">The final water colored photo will be sent in JPG / PNG / TIFF / PSD format. (High resolution).</div></div></div>\n', 'Ideas about your logo', 'logo', 'yes', 10, '', 'yes', '1', 3, 1, '0', 1, 2, 0, 4, 'active');
-
 -- --------------------------------------------------------
 
 --
@@ -2348,18 +1910,6 @@ CREATE TABLE `proposals_extras` (
   `price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `proposals_extras`
---
-
-INSERT INTO `proposals_extras` (`id`, `proposal_id`, `name`, `price`) VALUES
-(1, 6, 'HD quality', 10),
-(2, 6, 'FHD quality', 20),
-(3, 6, 'Clear Voice', 50),
-(4, 7, 'deliver same day', 10),
-(5, 8, 'full pages', 30),
-(6, 9, 'PSD', 20);
-
 -- --------------------------------------------------------
 
 --
@@ -2372,18 +1922,6 @@ CREATE TABLE `proposals_faq` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `proposals_faq`
---
-
-INSERT INTO `proposals_faq` (`id`, `proposal_id`, `title`, `content`) VALUES
-(1, 5, 'qus', 'ans'),
-(2, 5, 'qus 1', 'ans 1'),
-(3, 6, 'Is it Clear?', 'Yes'),
-(4, 6, 'What extensions are the records?', 'MP3 and WAV'),
-(5, 7, 'Is it Clear?', 'yes'),
-(6, 9, 'Is it Clear?', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -2412,39 +1950,6 @@ CREATE TABLE `proposal_packages` (
   `delivery_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `proposal_packages`
---
-
-INSERT INTO `proposal_packages` (`package_id`, `proposal_id`, `package_name`, `description`, `revisions`, `delivery_time`, `price`) VALUES
-(1, 1, 'Basic', '', '0', '1', '5'),
-(2, 1, 'Standard', '', '0', '1', '10'),
-(3, 1, 'Advance', '', '0', '1', '15'),
-(4, 2, 'Basic', '', '0', '1', '5'),
-(5, 2, 'Standard', '', '0', '1', '10'),
-(6, 2, 'Advance', '', '0', '1', '15'),
-(7, 3, 'Basic', '', '0', '1', '5'),
-(8, 3, 'Standard', '', '0', '1', '10'),
-(9, 3, 'Advance', '', '0', '1', '15'),
-(10, 4, 'Basic', '', '0', '1', '5'),
-(11, 4, 'Standard', '', '0', '1', '10'),
-(12, 4, 'Advance', '', '0', '1', '15'),
-(13, 5, 'Basic', '', '1', '', '5'),
-(14, 5, 'Standard', '', '2', '2', '10'),
-(15, 5, 'Advance', '', '3', '1', '15'),
-(16, 6, 'Basic', '15 sec', '0', '1', '5'),
-(17, 6, 'Standard', '30 sec', '0', '1', '10'),
-(18, 6, 'Advance', '1 min', '0', '1', '15'),
-(19, 7, 'Basic', '', '0', '1', '5'),
-(20, 7, 'Standard', '', '0', '1', '10'),
-(21, 7, 'Advance', '', '0', '1', '15'),
-(22, 8, 'Basic', '', '0', '1', '5'),
-(23, 8, 'Standard', '', '0', '1', '10'),
-(24, 8, 'Advance', '', '0', '1', '15'),
-(25, 9, 'Basic', '1 simple logo', '10', '1', '5'),
-(26, 9, 'Standard', '3 logos', '10', '1', '10'),
-(27, 9, 'Advance', '5 professional logos', '10', '1', '15');
 
 -- --------------------------------------------------------
 
@@ -2482,18 +1987,6 @@ CREATE TABLE `purchases` (
   `date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `purchases`
---
-
-INSERT INTO `purchases` (`purchase_id`, `seller_id`, `order_id`, `reason`, `amount`, `processing_fee`, `method`, `date`) VALUES
-(1, 3, 1, 'order', '10', '', 'shopping_balance', 'August 17, 2020'),
-(2, 3, 6, 'featured_listing', '10', '', 'shopping_balance', 'August 24, 2020'),
-(3, 3, 7, 'featured_listing', '10', '', 'shopping_balance', 'August 24, 2020'),
-(4, 3, 8, 'featured_listing', '10', '', 'shopping_balance', 'August 24, 2020'),
-(5, 3, 9, 'featured_listing', '10', '', 'shopping_balance', 'August 24, 2020'),
-(6, 3, 2, 'order', '10', '', 'shopping_balance', 'September 04, 2020');
-
 -- --------------------------------------------------------
 
 --
@@ -2505,21 +1998,6 @@ CREATE TABLE `recent_proposals` (
   `seller_id` int(10) NOT NULL,
   `proposal_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `recent_proposals`
---
-
-INSERT INTO `recent_proposals` (`recent_id`, `seller_id`, `proposal_id`) VALUES
-(59, 1, 4),
-(77, 3, 5),
-(81, 3, 2),
-(83, 3, 3),
-(84, 3, 4),
-(93, 1, 8),
-(96, 1, 3),
-(97, 1, 9),
-(99, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -2571,13 +2049,6 @@ CREATE TABLE `revenues` (
   `status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `revenues`
---
-
-INSERT INTO `revenues` (`revenue_id`, `seller_id`, `order_id`, `reason`, `amount`, `date`, `end_date`, `status`) VALUES
-(1, 2, 1, 'order', '8', 'August 18, 2020', 'August 18, 2020 06:50:27', 'pending');
-
 -- --------------------------------------------------------
 
 --
@@ -2595,19 +2066,6 @@ CREATE TABLE `sales` (
   `action` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sales`
---
-
-INSERT INTO `sales` (`id`, `buyer_id`, `work_id`, `payment_method`, `amount`, `profit`, `processing_fee`, `action`, `date`) VALUES
-(1, 3, 0, 'shopping_balance', '10', '0', '0', 'cart', '2020-08-17'),
-(2, 3, 1, 'shopping_balance', '10', '2', '0', 'order_completed', '2020-08-17'),
-(3, 3, 6, 'shopping_balance', '10', '10', '0', 'featured_fee', '2020-08-24'),
-(4, 3, 7, 'shopping_balance', '10', '10', '0', 'featured_fee', '2020-08-24'),
-(5, 3, 8, 'shopping_balance', '10', '10', '0', 'featured_fee', '2020-08-24'),
-(6, 3, 9, 'shopping_balance', '10', '10', '0', 'featured_fee', '2020-08-24'),
-(7, 3, 2, 'shopping_balance', '10', '0', '0', 'order', '2020-09-04');
 
 -- --------------------------------------------------------
 
@@ -2678,15 +2136,6 @@ CREATE TABLE `sellers` (
   `seller_status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `sellers`
---
-
-INSERT INTO `sellers` (`seller_id`, `seller_name`, `seller_user_name`, `seller_email`, `seller_wallet`, `seller_payouts`, `seller_paypal_email`, `seller_payoneer_email`, `seller_m_account_number`, `seller_m_account_name`, `seller_pass`, `seller_image`, `seller_cover_image`, `seller_image_s3`, `seller_cover_image_s3`, `seller_country`, `seller_city`, `seller_headline`, `seller_about`, `seller_level`, `seller_language`, `seller_recent_delivery`, `seller_rating`, `seller_offers`, `seller_referral`, `seller_ip`, `seller_verification`, `seller_vacation`, `seller_vacation_reason`, `seller_vacation_message`, `seller_register_date`, `enable_sound`, `enable_notifications`, `seller_activity`, `seller_timezone`, `seller_status`) VALUES
-(1, 'Gursewak Singh', 'gursewak', 'iamsewak@gmail.com', '', 0, '', '', 0, '', '$2y$10$SGlzMFtAU7AJpjJQCvLTdex9RqgYSjZRd3CuROfvsQ6NcCXULFUIK', '2_1597141590.png', '', 0, 0, 'Canada', 'BRAMRTON', 'Professional Voice Actress', 'I am a Voice Actress with over 16+ years of experience in everything from video games to phone systems to explainer videos to children\'s books. I am originally from the South East of England and have a natural British accent, as well as a Standard American accent from living in the US for 15 years.', 1, 1, 'none', 0, 10, 770598295, '103.41.26.44', 'ok', 'off', '', '', 'August 02, 2020', 'yes', 1, '2020-09-18 03:59:54', 'Asia/Kolkata', 'online'),
-(2, 'Gursewak Singh', 'gursewakss', 'iamsexwaktest@gmail.com', '', 0, '', '', 0, '', '$2y$10$2CWmwQXqLqBAC3hrBc6HQ.DEX1Axnbm4QEO/lsUcNzNeb1ZpUtl9y', 'dublin-sprinters-desat_0 (1)_1596545816.png', '', 0, 0, 'India', 'Ludhiana', '', '', 1, 1, 'August 17, 2020', 100, 10, 1296951797, '::1', 'ok', 'off', '', '', 'August 04, 2020', 'yes', 1, '2020-08-17 06:52:05', 'Asia/Kolkata', 'offline'),
-(3, 'S1', 's1', 'dc1@yopmail.com', '', 0, '', '', 0, '', '$2y$10$iq4JlqiV/9TBiIncqCoztujjnRsyoRrFEqft8e4E83GH9X7ZV2FMq', 'adult-beautiful-blur-2590575_1565298919_1566178756_1589930653_1598281618.png', '', 0, 0, 'Saudi Arabia', 'Riyadh', '', '', 1, 2, 'none', 0, 10, 612234353, '78.95.143.199', 'ok', 'off', '', '', 'August 13, 2020', 'yes', 1, '2020-09-14 09:43:15', 'Europe/Helsinki', 'online');
-
 -- --------------------------------------------------------
 
 --
@@ -2703,15 +2152,6 @@ CREATE TABLE `seller_accounts` (
   `month_earnings` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `seller_accounts`
---
-
-INSERT INTO `seller_accounts` (`account_id`, `seller_id`, `withdrawn`, `current_balance`, `used_purchases`, `pending_clearance`, `month_earnings`) VALUES
-(1, 1, '0', '0', '0', '0', '0'),
-(2, 2, '0', '0', '0', '8', '8'),
-(3, 3, '0', '9940', '60', '0', '0');
-
 -- --------------------------------------------------------
 
 --
@@ -2722,16 +2162,6 @@ CREATE TABLE `seller_languages` (
   `language_id` int(10) NOT NULL,
   `language_title` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `seller_languages`
---
-
-INSERT INTO `seller_languages` (`language_id`, `language_title`) VALUES
-(1, 'Punjabi'),
-(2, 'العربية'),
-(3, 'English'),
-(4, 'Punjabi');
 
 -- --------------------------------------------------------
 
@@ -2815,13 +2245,6 @@ CREATE TABLE `seller_reviews` (
   `seller_review` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `seller_reviews`
---
-
-INSERT INTO `seller_reviews` (`review_id`, `order_id`, `review_seller_id`, `seller_rating`, `seller_review`) VALUES
-(1, 1, 2, 5, 'happy to work with you');
-
 -- --------------------------------------------------------
 
 --
@@ -2832,14 +2255,6 @@ CREATE TABLE `seller_skills` (
   `skill_id` int(10) NOT NULL,
   `skill_title` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `seller_skills`
---
-
-INSERT INTO `seller_skills` (`skill_id`, `skill_title`) VALUES
-(1, 'Html'),
-(2, 'Htmlc');
 
 -- --------------------------------------------------------
 
@@ -2854,13 +2269,6 @@ CREATE TABLE `seller_type_status` (
   `time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `seller_type_status`
---
-
-INSERT INTO `seller_type_status` (`id`, `seller_id`, `message_group_id`, `time`, `status`) VALUES
-(1, 1, '1393817581', '2020-09-16 11:33:36', 'untyping');
 
 -- --------------------------------------------------------
 
@@ -2906,14 +2314,6 @@ CREATE TABLE `skills_relation` (
   `skill_id` int(10) NOT NULL,
   `skill_level` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `skills_relation`
---
-
-INSERT INTO `skills_relation` (`relation_id`, `seller_id`, `skill_id`, `skill_level`) VALUES
-(2, 3, 1, 'Expert'),
-(3, 1, 2, 'Intermediate');
 
 -- --------------------------------------------------------
 
@@ -3104,17 +2504,6 @@ CREATE TABLE `top_proposals` (
   `id` int(10) NOT NULL,
   `proposal_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `top_proposals`
---
-
-INSERT INTO `top_proposals` (`id`, `proposal_id`) VALUES
-(1, 5),
-(2, 6),
-(3, 8),
-(4, 7),
-(5, 9);
 
 -- --------------------------------------------------------
 
@@ -3730,13 +3119,13 @@ ALTER TABLE `withdrawals`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `admin_logs`
 --
 ALTER TABLE `admin_logs`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `admin_notifications`
@@ -3754,7 +3143,7 @@ ALTER TABLE `admin_rights`
 -- AUTO_INCREMENT for table `announcement_bar`
 --
 ALTER TABLE `announcement_bar`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `api_settings`
@@ -3784,25 +3173,25 @@ ALTER TABLE `article_cat`
 -- AUTO_INCREMENT for table `buyer_requests`
 --
 ALTER TABLE `buyer_requests`
-  MODIFY `request_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `request_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `buyer_reviews`
 --
 ALTER TABLE `buyer_reviews`
-  MODIFY `review_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `review_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cart_extras`
 --
 ALTER TABLE `cart_extras`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -3814,25 +3203,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `categories_children`
 --
 ALTER TABLE `categories_children`
-  MODIFY `child_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `child_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `cats_meta`
 --
 ALTER TABLE `cats_meta`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=808;
 
 --
 -- AUTO_INCREMENT for table `child_cats_meta`
 --
 ALTER TABLE `child_cats_meta`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6825;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contact_support`
@@ -3886,7 +3275,7 @@ ALTER TABLE `delivery_times`
 -- AUTO_INCREMENT for table `dusupay_orders`
 --
 ALTER TABLE `dusupay_orders`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT for table `enquiry_types`
@@ -3904,25 +3293,25 @@ ALTER TABLE `expenses`
 -- AUTO_INCREMENT for table `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `favourite_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `favourite_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `featured_proposals`
 --
 ALTER TABLE `featured_proposals`
-  MODIFY `featured_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `featured_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `footer_links`
 --
 ALTER TABLE `footer_links`
-  MODIFY `link_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `link_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `general_settings`
 --
 ALTER TABLE `general_settings`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `hide_seller_messages`
@@ -3946,13 +3335,13 @@ ALTER TABLE `home_section`
 -- AUTO_INCREMENT for table `home_section_slider`
 --
 ALTER TABLE `home_section_slider`
-  MODIFY `slide_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `slide_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ideas`
 --
 ALTER TABLE `ideas`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `inbox_messages`
@@ -3964,13 +3353,13 @@ ALTER TABLE `inbox_messages`
 -- AUTO_INCREMENT for table `inbox_sellers`
 --
 ALTER TABLE `inbox_sellers`
-  MODIFY `inbox_seller_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `inbox_seller_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `instant_deliveries`
 --
 ALTER TABLE `instant_deliveries`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
 
 --
 -- AUTO_INCREMENT for table `knowledge_bank`
@@ -3982,13 +3371,13 @@ ALTER TABLE `knowledge_bank`
 -- AUTO_INCREMENT for table `languages`
 --
 ALTER TABLE `languages`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `languages_relation`
 --
 ALTER TABLE `languages_relation`
-  MODIFY `relation_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `relation_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `messages_offers`
@@ -4000,31 +3389,31 @@ ALTER TABLE `messages_offers`
 -- AUTO_INCREMENT for table `my_buyers`
 --
 ALTER TABLE `my_buyers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `my_sellers`
 --
 ALTER TABLE `my_sellers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `notification_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `order_conversations`
 --
 ALTER TABLE `order_conversations`
-  MODIFY `c_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `c_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `order_extras`
@@ -4036,19 +3425,19 @@ ALTER TABLE `order_extras`
 -- AUTO_INCREMENT for table `order_tips`
 --
 ALTER TABLE `order_tips`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `package_attributes`
 --
 ALTER TABLE `package_attributes`
-  MODIFY `attribute_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `attribute_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `payment_settings`
@@ -4066,43 +3455,43 @@ ALTER TABLE `payouts`
 -- AUTO_INCREMENT for table `plugins`
 --
 ALTER TABLE `plugins`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `post_categories`
 --
 ALTER TABLE `post_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `post_comments`
 --
 ALTER TABLE `post_comments`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `proposals`
 --
 ALTER TABLE `proposals`
-  MODIFY `proposal_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `proposal_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `proposals_extras`
 --
 ALTER TABLE `proposals_extras`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `proposals_faq`
 --
 ALTER TABLE `proposals_faq`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `proposal_modifications`
@@ -4114,7 +3503,7 @@ ALTER TABLE `proposal_modifications`
 -- AUTO_INCREMENT for table `proposal_packages`
 --
 ALTER TABLE `proposal_packages`
-  MODIFY `package_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `package_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `proposal_referrals`
@@ -4126,13 +3515,13 @@ ALTER TABLE `proposal_referrals`
 -- AUTO_INCREMENT for table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `purchase_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `purchase_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `recent_proposals`
 --
 ALTER TABLE `recent_proposals`
-  MODIFY `recent_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `recent_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `referrals`
@@ -4150,13 +3539,13 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `revenues`
 --
 ALTER TABLE `revenues`
-  MODIFY `revenue_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `revenue_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `section_boxes`
@@ -4168,19 +3557,19 @@ ALTER TABLE `section_boxes`
 -- AUTO_INCREMENT for table `sellers`
 --
 ALTER TABLE `sellers`
-  MODIFY `seller_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `seller_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller_accounts`
 --
 ALTER TABLE `seller_accounts`
-  MODIFY `account_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `account_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller_languages`
 --
 ALTER TABLE `seller_languages`
-  MODIFY `language_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `language_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller_levels`
@@ -4204,19 +3593,19 @@ ALTER TABLE `seller_payment_settings`
 -- AUTO_INCREMENT for table `seller_reviews`
 --
 ALTER TABLE `seller_reviews`
-  MODIFY `review_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `review_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller_skills`
 --
 ALTER TABLE `seller_skills`
-  MODIFY `skill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `skill_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller_type_status`
 --
 ALTER TABLE `seller_type_status`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `send_offers`
@@ -4228,13 +3617,13 @@ ALTER TABLE `send_offers`
 -- AUTO_INCREMENT for table `site_currencies`
 --
 ALTER TABLE `site_currencies`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `skills_relation`
 --
 ALTER TABLE `skills_relation`
-  MODIFY `relation_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `relation_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `slider`
@@ -4270,13 +3659,13 @@ ALTER TABLE `support_tickets`
 -- AUTO_INCREMENT for table `temp_extras`
 --
 ALTER TABLE `temp_extras`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `temp_orders`
 --
 ALTER TABLE `temp_orders`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- AUTO_INCREMENT for table `terms`
@@ -4288,7 +3677,7 @@ ALTER TABLE `terms`
 -- AUTO_INCREMENT for table `top_proposals`
 --
 ALTER TABLE `top_proposals`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `unread_messages`
