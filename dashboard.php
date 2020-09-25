@@ -123,7 +123,7 @@
             <img src="user_images/empty-image.png" class="rounded-circle img-thumbnail" width="130">
             <?php } ?>
           </div>
-          <div class="col-lg-9 col-sm-12 text-lg-left text-center <?=($lang_dir == "right" ? 'order-1 order-sm-2':'')?>">
+          <div class="col-lg-9 col-sm-12  <?=($lang_dir == "right" ? 'order-1 order-sm-2':'text-center text-lg-left')?>">
             <div class="row mb-2">
               <div class="col-6 col-lg-4 mt-3">
                 <h6><i class="fa fa-globe pr-1"></i> <?= $lang["dashboard"]['country']; ?></h6>

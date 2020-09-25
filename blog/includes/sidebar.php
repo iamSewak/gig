@@ -1,8 +1,19 @@
-<div class="card mb-3"><!--- card Starts -->
+<div class="filters shadow-sm rounded bg-white mb-4 blog-sidebar">
+  
 
-	<div class="card-body"><!--- card-body Starts -->
-
-		<form action="index" method="get">
+   <div class="filters-card border-bottom p-4">
+                              <div class="filters-card-header" id="headingTwo">
+                                 <h6 class="mb-0">
+                                    <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                                    Search Blog
+                                    </a>
+                                 </h6>
+                              </div>
+                              <div id="collapsetwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion" style="">
+                                 <div class="filters-card-body card-shop-filters">
+                                    
+                                    
+                                   <form action="index" method="get">
 		
 			<div class="input-group">
 				<?php if($lang_dir == "right"){ ?>
@@ -23,15 +34,27 @@
 			</div>
 
 		</form>
+                                    
+                                    
+                                    
+                                    
+                                 </div>
+                              </div>
+                           </div>
 
-	</div><!--- card-body Ends -->
 
-</div><!--- card Ends -->
+   
+</div>
 
-<div class="card card-primary">
-	<div class="card-header <?= $textRight; ?>">Categories</div>
-	<div class="card-body">
-		<ul class="mb-0 list-unstyled ml-3 mr-3 <?= $textRight; ?>">
+
+<div class="filters shadow-sm rounded bg-white mb-4">
+   <div class="filters-header border-bottom pl-4 pr-4 pt-3 pb-3">
+      <h5 class="m-0">Categories</h5>
+   </div>
+   <div class="filters-card border-bottom p-4">
+                             <div id="collapsetwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion" style="">
+                                 <div class="card-shop-filters">
+                                    <ul class="mb-0 list-unstyled ml-3 mr-3 <?= $textRight; ?>">
 			<?php
 			$categories = $db->select("post_categories");
 			while($cat = $categories->fetch()){
@@ -49,5 +72,10 @@
 				</li>
 			<?php } ?>
 		</ul>
-	</div>
+                                                                        
+                                 </div>
+                              </div>
+                           </div>
 </div>
+
+

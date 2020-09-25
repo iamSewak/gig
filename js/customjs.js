@@ -96,15 +96,14 @@ $(document).ready(function(){
 		responsiveClass:true,
 		responsive:{
 			0:{
-				items:2,
-				margin:14,
-				autoWidth:true,
+				items:1,
+				margin:3,
 			},
 			480:{
-				items:2	
+				items:1	
 			},
 			768:{
-				items:3
+				items:1
 			},
 			900:{
 				items:4

@@ -1,4 +1,4 @@
-/<?php
+<?php
 
 session_start();
 require_once("../includes/db.php");
@@ -222,7 +222,7 @@ $show_img1 = getImageUrl2("proposals","proposal_img1",$proposal_img1);
 <!DOCTYPE html>
 <html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
-<title><?= $site_name; ?> - <?= $proposal_title; ?></title>
+<title><?= $site_name; ?> - <?= $proposal_title; ?> 8872306061</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="<?= $proposal_short_desc; ?>">

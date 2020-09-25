@@ -49,59 +49,45 @@
     }
   }
 ?>
-<div class="card border-success mb-3">
-  <div class="card-body pb-2 pt-3">
-    <ul class="nav flex-column">
-      <li class="nav-item checkbox checkbox-success">
+
+<div id="accordion">
+   <div class="px-4">
+      <ul class="nav flex-column">
+         <li class="nav-item checkbox checkbox-success">
         <label>
         <input type="checkbox" value="1" class="get_online_sellers" 
           <?php if(isset($online_sellers["1"])){ echo "checked"; } ?>> 
         <span><?= $lang['sidebar']['online_sellers']; ?></span>
         </label>
       </li>
-    </ul>
-  </div>
-</div>
-
-<div class="card border-success mb-3">
-  <div class="card-body pb-2 pt-3 <?=($lang_dir == "right" ? 'text-right':'')?>">
-    <ul class="nav flex-column">
-      <li class="nav-item checkbox checkbox-success">
+      </ul>
+   </div>
+   <div class="px-4">
+      <ul class="nav flex-column">
+          <li class="nav-item checkbox checkbox-success">
         <label>
         <input type="checkbox" value="1" class="get_instant_delivery" <?php if($instant_delivery == 1){ echo "checked"; } ?> >
         <span><?= $lang['sidebar']['instant_delivery']; ?></span>
         </label>
       </li>
-    </ul>
-  </div>
-</div>
+      </ul>
+   </div>
 
-<div class="card border-success mb-3">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang['sidebar']['sort_by']['title']; ?></h3>
-  </div>
-  <div class="card-body">
-    <label class="checkcontainer"><?= $lang['sidebar']['sort_by']['new']; ?>
-      <input type="radio" <?= ($order_by == "DESC")?"checked":""; ?> value="DESC" class="get_order" name="radio">
-      <span class="checkmark"></span>
-    </label>
 
-    <label class="checkcontainer"><?= $lang['sidebar']['sort_by']['old']; ?>
-      <input type="radio" <?= ($order_by == "ASC")?"checked":""; ?> value="ASC" class="get_order" name="radio">
-      <span class="checkmark"></span>
-    </label>
-  </div>
-</div>
-
-<div class="card border-success mb-3">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang["sidebar"]["seller_country"]; ?></h3>
-    <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_country clearlink" onclick="clearCountry()">
+<div class="filters-card border-bottom p-4">
+      <div class="filters-card-header" id="headingOne">
+         <h6 class="mb-0">
+            <a href="#" class="<?=($lang_dir == "right" ? 'float-right-':'float-left-')?> btn-link" data-toggle="collapse" data-target="#collapse_country" aria-expanded="false" aria-controls="collapse_country">
+           <?= $lang["sidebar"]["seller_country"]; ?>
+            </a>
+             <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_country clearlink" onclick="clearCountry()">
       <?= $lang['sidebar']['clear_filter']; ?>
     </button>
-  </div>
-  <div class="card-body">
-    <ul class="nav flex-column">
+         </h6>
+      </div>
+      <div id="collapse_country" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="filters-card-body card-shop-filters">
+             <ul class="nav flex-column">
     <?php
     $countries = [];
     $get_proposals = $db->query("select DISTINCT proposal_seller_id from proposals where proposal_tags LIKE :tag AND proposal_status='active'",array(":tag"=>"%$tag%"));
@@ -122,21 +108,24 @@
     </li>
     <?php }} ?>
     </ul>
-  </div>
-</div>
+         </div>
+      </div>
+   </div>
 
-<?php include("$dir/includes/comp/currency_converter.php"); ?>
-
-
-<div class="card border-success mb-3 seller-cities d-none">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang["sidebar"]["seller_city"]; ?></h3>
-    <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_city clearlink" onclick="clearCity()">
+ <div class="filters-card border-bottom p-4">
+      <div class="filters-card-header" id="headingOne">
+         <h6 class="mb-0">
+            <a href="#" class="<?=($lang_dir == "right" ? 'float-right-':'float-left-')?> btn-link" data-toggle="collapse" data-target="#collapse_city" aria-expanded="false" aria-controls="collapse_city">
+          <?= $lang["sidebar"]["seller_city"]; ?>
+            </a>
+             <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_city clearlink" onclick="clearCity()">
       <?= $lang['sidebar']['clear_filter']; ?>
     </button>
-  </div>
-  <div class="card-body">
-    <ul class="nav flex-column">
+         </h6>
+      </div>
+      <div id="collapse_city" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="filters-card-body card-shop-filters">
+             <ul class="nav flex-column">
     <?php
     $cities = [];
     $get_proposals = $db->query("select DISTINCT proposal_seller_id from proposals where proposal_tags LIKE :tag AND proposal_status='active'",array(":tag"=>"%$tag%"));
@@ -156,19 +145,26 @@
     </li>
     <?php }} ?>
     </ul>
-  </div>
-</div>
+         </div>
+      </div>
+   </div>
 
+<?php include("$dir/includes/comp/currency_converter.php"); ?>
 
-<div class="card border-success mb-3">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang['sidebar']['delivery_time']; ?></h3>
-    <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_delivery_time clearlink" onclick="clearDelivery()">
+<div class="filters-card border-bottom p-4">
+      <div class="filters-card-header" id="headingOne">
+         <h6 class="mb-0">
+            <a href="#" class="<?=($lang_dir == "right" ? 'float-right-':'float-left-')?> btn-link" data-toggle="collapse" data-target="#collapse_delivery" aria-expanded="false" aria-controls="collapse_delivery">
+         <?= $lang['sidebar']['delivery_time']; ?>
+            </a>
+            <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_delivery_time clearlink" onclick="clearDelivery()">
     <i class="fa fa-times-circle"></i> Clear Filter
     </button>
-  </div>
-  <div class="card-body">
-    <ul class="nav flex-column">
+         </h6>
+      </div>
+      <div id="collapse_delivery" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="filters-card-body card-shop-filters">
+            <ul class="nav flex-column">
       <?php
 
         $get_proposals = $db->query("select DISTINCT delivery_id from proposals where proposal_tags LIKE :tag AND proposal_status='active'",array(":tag"=>"%$tag%"));
@@ -188,17 +184,26 @@
       </li>
       <?php }} ?>
     </ul>
-  </div>
-</div>
-<div class="card border-success mb-3">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang['sidebar']['seller_level']; ?></h3>
-    <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_level clearlink" onclick="clearLevel()">
+         </div>
+      </div>
+   </div>
+
+
+
+<div class="filters-card border-bottom p-4">
+      <div class="filters-card-header" id="headingOne">
+         <h6 class="mb-0">
+            <a href="#" class="<?=($lang_dir == "right" ? 'float-right-':'float-left-')?> btn-link" data-toggle="collapse" data-target="#collapse_level" aria-expanded="false" aria-controls="collapse_level">
+         <?= $lang['sidebar']['seller_level']; ?>
+            </a>
+             <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_level clearlink" onclick="clearLevel()">
     <i class="fa fa-times-circle"></i> Clear Filter
     </button>
-  </div>
-  <div class="card-body">
-    <ul class="nav flex-column">
+         </h6>
+      </div>
+      <div id="collapse_level" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="filters-card-body card-shop-filters">
+            <ul class="nav flex-column">
       <?php
         $get_proposals = $db->query("select DISTINCT level_id from proposals where proposal_tags LIKE :tag AND proposal_status='active'",array(":tag"=>"%$tag%"));
         while($row_proposals = $get_proposals->fetch()){
@@ -216,17 +221,24 @@
       </li>
       <?php }} ?>
     </ul>
-  </div>
-</div>
-<div class="card border-success mb-3">
-  <div class="card-header bg-success">
-    <h3 class="<?=($lang_dir == "right" ? 'float-right':'float-left')?> text-white h5"><?= $lang['sidebar']['seller_lang']; ?></h3>
-    <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_language clearlink" onclick="clearLanguage()">
+         </div>
+      </div>
+   </div>
+
+<div class="filters-card border-bottom p-4">
+      <div class="filters-card-header" id="headingOne">
+         <h6 class="mb-0">
+            <a href="#" class="<?=($lang_dir == "right" ? 'float-right-':'float-left-')?> btn-link" data-toggle="collapse" data-target="#collapse_language" aria-expanded="false" aria-controls="collapse_language">
+         <?= $lang['sidebar']['seller_lang']; ?>
+            </a>
+             <button class="btn btn-secondary btn-sm <?=($lang_dir == "right" ? 'float-left':'float-right')?> clear_seller_language clearlink" onclick="clearLanguage()">
     <i class="fa fa-times-circle"></i> Clear Filter
     </button>
-  </div>
-  <div class="card-body">
-    <ul class="nav flex-column">
+         </h6>
+      </div>
+      <div id="collapse_language" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="filters-card-body card-shop-filters">
+            <ul class="nav flex-column">
       <?php
         $get_proposals = $db->query("select DISTINCT language_id from proposals where not language_id='0' and proposal_tags LIKE :tag AND proposal_status='active'",array(":tag"=>"%$tag%"));
         while($row_proposals = $get_proposals->fetch()){
@@ -244,5 +256,16 @@
       </li>
       <?php }} ?>
     </ul>
-  </div>
+         </div>
+      </div>
+   </div>
+
+
 </div>
+
+
+
+
+
+
+

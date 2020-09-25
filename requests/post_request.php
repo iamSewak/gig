@@ -10,7 +10,7 @@ $row_login_seller = $select_login_seller->fetch();
 $login_seller_id = $row_login_seller->seller_id;
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
 	<title><?= $site_name; ?> - <?= $lang["titles"]["post_request"]; ?></title>
 	<meta charset="utf-8">
@@ -22,6 +22,7 @@ $login_seller_id = $row_login_seller->seller_id;
 	<link href="../styles/bootstrap.css" rel="stylesheet">
     <link href="../styles/custom.css" rel="stylesheet"> <!-- Custom css code from modified in admin panel --->
 	<link href="../styles/styles.css" rel="stylesheet">
+  <link href="../styles/css/style.css" rel="stylesheet">
 	<link href="../styles/user_nav_styles.css" rel="stylesheet">
 	<link href="../font_awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../styles/sweat_alert.css" rel="stylesheet">
@@ -46,7 +47,7 @@ Please confirm your email to use this feature.
 }else{
 ?>
 
-<div class="container-fluid mt-5 mb-5">
+<div class="container mt-5 mb-5">
   <h1 class="mb-5">
     <i class="fa fa-plus-circle" aria-hidden="true">
     </i>

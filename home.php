@@ -23,10 +23,10 @@
             <div class="homepage-search-form">
                <form action="" method="post" class="form-noborder">
                   <div class="form-row">
-                     <div class="col-lg-7 col-md-7 col-sm-12 form-group">
+                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-10 form-group">
                         <input type="text" name="search_query" class="form-control border-0 form-control-lg shadow-sm" value="<?= @$_SESSION["search_query"]; ?>" placeholder="<?= $lang['search']['placeholder']; ?>">
                      </div>
-                     <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-2 form-group">
                         <button name="search" type="submit" class="btn btn-success btn-block btn-lg btn-gradient shadow-sm">
                         <i class="fa fa-search"></i>
                         </button>

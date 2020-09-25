@@ -44,7 +44,7 @@ $login_seller_id = $row_login_seller->seller_id;
 <div class="container">
   <div class="row">
     <div class="col-md-12 mt-5">
-      <h2 class="mb-5 <?=($lang_dir == "right" ? 'text-right':'')?>"> <?= $lang["titles"]["purchases"]; ?> </h2>
+      <h2 class="mb-5"> <?= $lang["titles"]["purchases"]; ?> </h2>
       <div class="table-responsive box-table">
         <table class="table table-bordered">
         <thead>

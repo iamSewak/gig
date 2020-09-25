@@ -2,9 +2,24 @@
   session_start();
   require_once("../includes/db.php");
   require_once("../social-config.php");
+
+
+  $id = $input->get('id');
+  $post = $db->select("posts",['id'=>$id])->fetch();
+  $url = preg_replace('#[ -]+#','-', $post->title);
+
+  /// Get Category Details
+  $get_cat = $db->select("post_categories",['id'=>$post->cat_id]);
+  $row_cat = $get_cat->fetch();
+  $cat_name = $row_cat->cat_name;
+
+  $comments = $db->select("post_comments",array("post_id"=>$id));
+  $count_comments = $comments->rowCount();
+
+
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
   <title> <?= $site_name; ?> - <?= $lang['titles']['blog']; ?> </title>
   <base href="<?= $site_url; ?>/blog/"/>
@@ -14,8 +29,9 @@
   <meta name="keywords" content="<?= $site_keywords; ?>">
   <meta name="author" content="<?= $site_author; ?>">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
-  <link href="../styles/bootstrap.css" rel="stylesheet">
-  <link href="../styles/custom.css" rel="stylesheet">
+  <link href="../styles/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/custom.css" rel="stylesheet">
+    <link href="../styles/css/style.css" rel="stylesheet">
   <!-- Custom css code from modified in admin panel --->
   <link href="../styles/styles.css" rel="stylesheet">
   <link href="../styles/categories_nav_styles.css" rel="stylesheet">
@@ -35,12 +51,21 @@
   
   <?php require_once("../includes/header.php"); ?>
 
-  <header id="how_to"><!--- how_to Starts --->
-   <div class="cell">
-      <h2 class="text-center text-white"><?= $lang['blog']['title']; ?></h2>
-      <h3 class="text-center mb-0"><?= $lang['blog']['desc']; ?></h3>
-    </div>
-  </header><!--- how_to Ends --->
+ <section id="how_to" class="blog-details freelanceheader bg-gradient related-links related-links-bg bb-xs-1">
+  <div class="freelancersbg container">
+    <h2 class="pb-2 text-white"><?= $post->title; ?></h2>
+    <p>
+      Published on: <span class="text-muted"><?= $post->date_time; ?></span> | 
+      Category: <a href="index?cat_id=<?= $post->cat_id; ?>" class="text-muted"><?= $cat_name; ?></a> |
+      Author: <a href="index?author=<?= $post->author; ?>" class="text-muted"><?= $post->author; ?></a> 
+     </p>
+  </div>
+ </section>
+
+
+
+
+
 
   <br><br>
   <div class="container mb-5"><!--- container Starts --->

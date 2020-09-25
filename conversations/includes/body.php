@@ -7,6 +7,6 @@
 	</center>
 
 	<div id="msgHeader" class="card-header bg-transparent inboxHeader2 d-none"></div>
-	<div id="showSingle" class="row"></div>
+	<div id="showSingle" class="row chat-box"></div>
 
 </div>

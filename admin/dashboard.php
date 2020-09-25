@@ -41,7 +41,7 @@
                      
                      <div class="col-3">
                          
-                     <i class="fa fa-table fa-5x"></i>
+                     <i class="fa fa-table fa-2x"></i>
                      
                      </div>
                      
@@ -88,7 +88,7 @@
                      
                      <div class="col-3">
                          
-                         <i class="fa fa-users fa-5x"></i>
+                         <i class="fa fa-users fa-2x"></i>
                      
                      </div>
                      
@@ -141,7 +141,7 @@
                      
                      <div class="col-3">
                          
-                         <i class="fa fa-shopping-cart fa-5x"></i>
+                         <i class="fa fa-shopping-cart fa-2x"></i>
                      
                      
                      </div>
@@ -192,7 +192,7 @@
                  <div class="row">
                      
                      <div class="col-3">
-                        <i class="fa fa-phone-square fa-5x"></i>
+                        <i class="fa fa-phone-square fa-2x"></i>
                      </div>
                      
                      <div class="col-9 text-right">

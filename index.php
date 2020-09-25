@@ -44,7 +44,7 @@ $site_title = $row_general_settings->site_title;
 	<script type="text/javascript" src="js/sweat_alert.js"></script>
 	
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<style>.swal2-popup .swal2-styled.swal2-confirm{background-color: #24d5af;}</style>
 </head>
 <body class="is-responsive">

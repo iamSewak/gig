@@ -68,7 +68,7 @@ opacity:1;
 .main-cat-list > li {
 	list-style:none;
 	height:30px;
-	font-size:14px;
+	font-size:13px;
 	line-height:38px;	
 	color:#303030;
 	white-space:nowrap;
@@ -93,7 +93,7 @@ padding:0 10px;
 
 .main-cat-list > li .menu-cont {
 	
-background-color:#fff;
+background-color:#2bdc9e;
 
 position: absolute;
 
@@ -101,13 +101,13 @@ left:-1px;
 
 z-index:2000;
 
-top:120%;
+top:137%;
 
 display:none;	
 	
 width:0;
 
-border:1px #dddddd solid;
+/*border:1px #dddddd solid;*/
 
 box-sizing:border-box;
 
@@ -157,7 +157,7 @@ overflow: hidden;
 
 .main-cat-list > li .menu-cont li a {
 	
-color: #00698c;
+color: #fff;
 
 display:block;
 	
@@ -184,7 +184,7 @@ text-decoration: none !important;
 	
 font-weight:400;
 
-color:#555555;
+color:rgba(0,0,0,.5);
 	
 }
 

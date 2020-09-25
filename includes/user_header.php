@@ -47,11 +47,9 @@
 <link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
 
 <div id="gnav-header" class="gnav-header global-nav clear gnav-3">
-
-
   <header id="gnav-header-inner" class="container gnav-header-inner clear apply-nav-height col-group has-svg-icons body-max-width">
     <div class="row">
-   <div class="col-md-6 <?=($lang_dir == "right" ? 'order-2 order-sm-1':'')?>">
+   <div class="col-md-6 <?=($lang_dir == "right" ? 'order-1 order-sm-1':'')?>">
      <div class="row">
       <div id="miver-logo" class="apply-nav-height miver-logo-svg miver-logo-svg-logged-in <?php if(isset($_SESSION["seller_user_name"])){echo"loggedInLogo";} ?>">
         <a href="<?= $site_url; ?>">
@@ -105,7 +103,7 @@
       ?>
       </div>
 </div>
-<div class="col-md-6 <?=($lang_dir == "right" ? 'order-1 order-sm-2':'')?>">
+<div class="col-md-6 <?=($lang_dir == "right" ? 'order-2 order-sm-2':'')?>">
     <div class="row" style="
     display: <?=($lang_dir == "right" ? 'inline-block':'block')?>;
     float: <?=($lang_dir == "right" ? 'left': '')?>; 

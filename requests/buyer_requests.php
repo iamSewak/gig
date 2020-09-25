@@ -35,7 +35,7 @@
   
   ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
   <head>
     <title><?= $site_name; ?> - Recent Buyer Requests.</title>
     <meta charset="utf-8">
@@ -48,6 +48,7 @@
     <link href="../styles/custom.css" rel="stylesheet">
     <!-- Custom css code from modified in admin panel --->
     <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../styles/css/style.css" rel="stylesheet">
     <link href="../styles/user_nav_styles.css" rel="stylesheet">
     <link href="../font_awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../styles/sweat_alert.css" rel="stylesheet">
@@ -59,7 +60,7 @@
   </head>
 <body class="is-responsive">
   <?php require_once("../includes/user_header.php"); ?>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row buyer-requests">
       <div class="col-md-12 mt-5">
         <h1 class="col-md-9 float-left">

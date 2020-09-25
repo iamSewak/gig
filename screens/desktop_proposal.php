@@ -2,7 +2,7 @@
   <div class="third-menu border-top">
    <div class="container">
       <div class="row d-flex align-items-center justify-content-between">
-         <div class="col-lg-9 left">
+         <div class="left">
                <nav>
                   <ul class="container text-center" id="mainNav">
                      <li class="selected">
@@ -43,7 +43,7 @@
                </nav>
            
          </div>
-         <div class="col-lg-3 right">
+         <div class="right">
             <ul class="d-flex align-items-center justify-content-end">
                <li>
                   <button>
@@ -146,6 +146,7 @@
                      class="profile-pict-img img-fluid" alt="">
                   <?php } ?>
                   </label>
+                  <span id="details"></span>
                   <div class="right">
                      <div class="profile-name">
                         <span class="user-status">
@@ -369,8 +370,10 @@
                </div>
                <?php } ?>
             </div>
+
+            <span id="faq"></span>
             <?php if($count_faq > 0){ ?>
-            <div id="faq" class="faq <?=($lang_dir == "right" ? 'text-right':'')?>">
+            <div class="faq <?=($lang_dir == "right" ? 'text-right':'')?>">
                <h3>FAQ</h3>
                <div class="accordion" id="accordionExample">
                   <!-- card-body Starts -->

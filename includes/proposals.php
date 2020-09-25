@@ -12,21 +12,21 @@
    ?>
 <div>
    <a href="<?= $site_url; ?>/proposals/<?= $seller_user_name; ?>/<?= $proposal_url; ?>">
-   <img class="img-fluid" src="<?= $proposal_img1; ?>" />
+      <img class="img-fluid" src="<?= $proposal_img1; ?>" />
    </a>
    <div class="inner-slider">
       <div class="inner-wrapper">
          <div class="d-flex align-items-center">
             <span class="seller-image">
-            <img class="img-fluid"
-               src="<?= $seller_image; ?>"
-               alt='' />
+               <img class="img-fluid"
+                    src="<?= $seller_image; ?>"
+                    alt='' />
             </span>
             <span class="seller-name">
-            <a href="#"><?= $seller_user_name; ?></a>
-            <span class="level hint--top level-one-seller">
-            <?= $seller_level; ?>
-            </span>
+               <a href="#"><?= $seller_user_name; ?></a>
+               <span class="level hint--top level-one-seller">
+                  <?= $seller_level; ?>
+               </span>
             </span>
          </div>
          <h3><?= $proposal_title; ?></h3>
@@ -60,6 +60,38 @@
                </a>
                <?php } ?>
             </div>
+            <div class="proposal-fav">
+
+         <?php if($proposal_enable_referrals == "yes" & $enable_referrals == "yes"){ ?>
+
+         <?php if(isset($_SESSION['seller_user_name'])){ ?>
+         <?php if($proposal_seller_id != $login_seller_id){ ?>
+         <a class="icn-list proposal-offer" data-id="<?= $proposal_id; ?>">
+         <?php require("$dir/images/affiliate.svg"); ?>
+         </a>
+         <?php } ?>
+         <?php }else{ ?>
+         <a class="icn-list" data-toggle="modal" data-target="#login-modal">
+         <?php require("$dir/images/affiliate.svg"); ?>
+         </a>
+         <?php } ?>
+
+         <?php } ?>
+         
+         <?php if($enableVideo == 1){ ?>
+            <a class="icn-list" data-toggle="tooltip" data-placement="top" title="<?= $lang['proposals']['video']; ?>">
+            <?php require("$dir/images/camera.svg"); ?>
+            </a>
+         <?php } ?>
+
+         <?php if($enable_delivery == 1){ ?>
+            <a class="icn-list" data-toggle="tooltip" data-placement="top" title="<?= $lang['proposals']['instant_delivery']; ?>">
+            <?php require("$dir/images/flash.svg"); ?>
+            </a>
+         <?php } ?>
+
+      </div>
+            
             <div class="price">
                <a href="<?= $site_url; ?>/proposals/<?= $seller_user_name; ?>/<?= $proposal_url; ?>">
                <?= $lang['proposals']['starting_at']; ?> <span> <?= showPrice($proposal_price); ?></span>

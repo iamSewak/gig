@@ -10,7 +10,7 @@ if(isset($_GET['tag'])){
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
   <?php if(isset($_SESSION['tag'])){ ?>
 	<title><?= $site_name; ?> - <?= ucfirst($tag); ?>  </title>
@@ -20,9 +20,10 @@ if(isset($_GET['tag'])){
 	<meta name="author" content="<?= $site_author; ?>">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 	<link href="<?= $site_url; ?>/styles/bootstrap.css" rel="stylesheet">
-	<link href="<?= $site_url; ?>/styles/custom.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet">
-	<!-- Custom css code from modified in admin panel --->
+	<link href="<?= $site_url; ?>/styles/custom.css" rel="stylesheet">
 	<link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet">
+	<link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet">
+	<!-- Custom css code from modified in admin panel --->
 	<link href="<?= $site_url; ?>/styles/categories_nav_styles.css" rel="stylesheet">
 	<link href="<?= $site_url; ?>/font_awesome/css/font-awesome.css" rel="stylesheet">
 	<link href="<?= $site_url; ?>/styles/sweat_alert.css" rel="stylesheet">
@@ -35,22 +36,61 @@ if(isset($_GET['tag'])){
 	<?php } ?>
 </head>
 <body class="is-responsive">
-<?php include("../includes/header.php"); ?>
-<div class="container-fluid mt-5"> <!-- Container start -->
-	<div class="row">
-		<div class="col-md-12">
-			<center>
-			<h1> <?= ucfirst($tag); ?> </h1>
-			<p class="lead"><?= str_replace('{tag}',$tag,$lang['tag_proposals']['desc']); ?></p>
-			</center>
-			<hr class="mt-5 pt-2">
-		</div>
-	</div>
+<?php include("../includes/tag-header.php"); ?>
+
+<section class="py-5 bg-gradient inner-header">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h1 class="mt-0 mb-3 text-white"><?= ucfirst($tag); ?></h1>
+                  <div class="breadcrumbs">
+                     <p class="mb-0 text-white"> <?= str_replace('{tag}',$tag,$lang['tag_proposals']['desc']); ?> </p>
+                  </div>
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+<div class="container mt-5"> <!-- Container start -->
 	<div class="row mt-3">
-	<div class="col-lg-3 col-md-4 col-sm-12 <?=($lang_dir == "right" ? 'order-2 order-sm-1':'')?>">
-		<?php include("../includes/tag_sidebar.php"); ?>
-	</div>
-	<div class="col-lg-9 col-md-8 col-sm-12 <?=($lang_dir == "right" ? 'order-1 order-sm-2':'')?>">
+
+		<div class="col-lg-3 col-md-4 col-sm-12 <?=($lang_dir == "right" ? 'order-1 order-sm-1':'')?>">
+                     <div class="filters shadow-sm rounded bg-white mb-4">
+                        <div class="filters-header border-bottom pl-4 pr-4 pt-3 pb-3">
+                           <h5 class="m-0"><?= $lang['sidebar']['sort_by']['title']; ?></h5>
+                        </div>
+                        <div class="">
+                           <div class="card-body">
+                              <div>
+                                 <div class="filters-card-body card-shop-filters pt-0">
+                                    <label class="checkcontainer"><?= $lang['sidebar']['sort_by']['new']; ?>
+                                    <input type="radio" <?= ($order_by == "DESC")?"checked":""; ?> value="DESC" class="get_order custom-control-input" name="radio">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkcontainer mb-0"><?= $lang['sidebar']['sort_by']['old']; ?>
+                                    <input type="radio" <?= ($order_by == "ASC")?"checked":""; ?> value="ASC" class="get_order custom-control-input" name="radio">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters shadow-sm rounded bg-white mb-4">
+                        <div class="filters-header border-bottom pl-4 pr-4 pt-3 pb-3">
+                           <h5 class="m-0">Filter By</h5>
+                        </div>
+                        <div class="filters-body">
+                          <?php include("../includes/tag_sidebar.php"); ?>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+	<div class="col-lg-9 view_slider recommended <?=($lang_dir == "right" ? 'order-2 order-sm-2':'')?>">
 		<div class="row proposals" id="tag_proposals">
 		  <?php get_tag_proposals(); ?>
 		</div>

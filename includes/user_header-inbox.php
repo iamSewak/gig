@@ -45,10 +45,13 @@
 <link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
 <link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
 
-<div class="gnav-header global-nav clear gnav-3">
-  <header id="gnav-header-inner" class="gnav-header-inner clear apply-nav-height col-group has-svg-icons body-max-width">
+<div id="gnav-header" class="gnav-header global-nav clear gnav-3">
+
+
+  <header id="gnav-header-inner" class="container gnav-header-inner clear apply-nav-height col-group has-svg-icons body-max-width">
     <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-6 <?=($lang_dir == "right" ? 'order-1 order-sm-1':'')?>">
+      <div class="row">
       <div id="miver-logo" class="apply-nav-height miver-logo-svg miver-logo-svg-logged-in <?php if(isset($_SESSION["seller_user_name"])){echo"loggedInLogo";} ?>">
         <a href="<?= $site_url; ?>">
           <?php if($site_logo_type == "image"){ ?>
@@ -79,11 +82,11 @@
             <div class="gnav-search-inner clearable">
               <label for="search-query" class="screen-reader-only">Search for items</label>
               <div class="search-input-wrapper text-field-wrapper">
-                <input id="search-query" class="rounded" name="search_query"
+                <input id="search-query" class="rounded <?=($lang_dir == "right" ? 'ml-2':'mr-2')?>" name="search_query"
                   placeholder="<?= $lang['search']['placeholder']; ?>" value="<?= @$_SESSION["search_query"]; ?>"  autocomplete="off">
               </div>
               <div class="search-button-wrapper hide">
-                <button class="btn btn-primary" name="search" type="submit" value="Search">
+                <button class="btn btn-primary btn-success" name="search" type="submit" value="Search">
                 <?= $lang['search']['button']; ?>
                 </button>
               </div>
@@ -99,11 +102,20 @@
             echo "<script>window.open('$site_url/search.php','_self')</script>";
         }
       ?>
+      </div>
+</div>
+      <div class="col-md-6 <?=($lang_dir == "right" ? 'order-2 order-sm-2':'')?>">
+    <div class="row" style="
+    display: <?=($lang_dir == "right" ? 'inline-block':'block')?>;
+    float: <?=($lang_dir == "right" ? 'left': '')?>; 
+">
       <ul class="account-nav apply-nav-height">
         <?php 
           require_once("comp/UserMenu.php");
         ?>
       </ul>
+      </div>
+     </div>
     </div>
     </div>
   </header>
@@ -156,4 +168,4 @@ echo $message;
   });
 </script>
 <?php  } } ?>
-<?php require_once("external_stylesheet.php"); ?>
+<?php /*require_once("external_stylesheet.php");*/ ?>

@@ -2,7 +2,6 @@
    session_start();
    require_once("../includes/db.php");
    require_once("../functions/functions.php");
-   
    if(isset($_GET['cat_url'])){
      if(isset($_GET['cat_child_url'])){
        $array = explode("/",$input->get('cat_url'));
@@ -30,7 +29,6 @@
        echo "<script>window.open('$site_url/index?not_available','_self');</script>";
      }
      $_SESSION['cat_child_id']= $get_child->fetch()->child_id;
-   
    }
    ?>
 <!DOCTYPE html>
@@ -44,7 +42,7 @@
          $cat_title = $row_meta->cat_title;
          $cat_desc = $row_meta->cat_desc;
          ?>
-      <title><?= $site_name; ?> - <?= $cat_title; ?>  </title>
+      <title> <?= $site_name; ?> - <?= $cat_title; ?> </title>
       <meta name="description" content="<?= $cat_desc; ?>" >
       <?php } ?>
       <?php
@@ -63,7 +61,8 @@
       <meta name="author" content="<?= $site_author; ?>">
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
       <link href="<?= $site_url; ?>/styles/bootstrap/css/bootstrap.css" rel="stylesheet">
-      <link href="<?= $site_url; ?>/styles/custom.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet"><link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet">
+      <link href="<?= $site_url; ?>/styles/custom.css" rel="stylesheet">
+
       <!-- Custom css code from modified in admin panel --->
       <link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet">
       <link href="<?= $site_url; ?>/styles/css/style.css" rel="stylesheet">

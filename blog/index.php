@@ -12,7 +12,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
 <title> <?= $site_name; ?> - <?= $lang['titles']['blog']; ?> </title>
 <meta charset="utf-8">
@@ -21,8 +21,9 @@
 <meta name="keywords" content="<?= $site_keywords; ?>">
 <meta name="author" content="<?= $site_author; ?>">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
-<link href="../styles/bootstrap.css" rel="stylesheet">
-<link href="../styles/custom.css" rel="stylesheet">
+<link href="../styles/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/custom.css" rel="stylesheet">
+    <link href="../styles/css/style.css" rel="stylesheet">
 <!-- Custom css code from modified in admin panel --->
 <link href="../styles/styles.css" rel="stylesheet">
 <link href="../styles/categories_nav_styles.css" rel="stylesheet">
@@ -47,12 +48,15 @@
 <body class="is-responsive blog">
 <?php require_once("../includes/header.php"); ?>
 
-<header id="how_to"><!--- how_to Starts --->
-   <div class="cell">
-      <h2 class="text-center text-white"><?= $lang['blog']['title']; ?></h2>
-      <h3 class="text-center mb-0"><?= $lang['blog']['desc']; ?></h3>
+
+ <section id="how_to" class="freelanceheader bg-gradient related-links related-links-bg bb-xs-1">
+  <div class="freelancersbg container">
+    <h2 class="pb-2 text-white"><?= $lang['blog']['title']; ?></h2>
+    <h5 class="text-white" ><?= $lang['blog']['desc']; ?></h5>
   </div>
-</header><!--- how_to Ends --->
+ </section>
+
+
 
 <br><br>
 <div class="container mb-5"><!--- container Starts --->

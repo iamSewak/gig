@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once("../includes/db.php");
 if(!isset($_SESSION['seller_user_name'])){
@@ -34,7 +33,7 @@ $count_offers = $get_offers->rowCount();
 
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">
 <head>
 	<title><?= $site_name; ?> - View Offers.</title>
 	<meta charset="utf-8">
@@ -46,6 +45,7 @@ $count_offers = $get_offers->rowCount();
 	<link href="../styles/bootstrap.css" rel="stylesheet">
 	<link href="../styles/custom.css" rel="stylesheet"> <!-- Custom css code from modified in admin panel --->
 	<link href="../styles/styles.css" rel="stylesheet">
+	<link href="../styles/css/style.css" rel="stylesheet">
 	<link href="../styles/user_nav_styles.css" rel="stylesheet">
 	<link href="../font_awesome/css/font-awesome.css" rel="stylesheet">
 	<script type="text/javascript" src="../js/jquery.min.js"></script>

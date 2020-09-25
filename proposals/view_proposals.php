@@ -1,14 +1,14 @@
 <?php
-session_start();
-require_once("../includes/db.php");
-if(!isset($_SESSION['seller_user_name'])){
-echo "<script>window.open('../login','_self')</script>";
-}
-$login_seller_user_name = $_SESSION['seller_user_name'];
-$select_login_seller = $db->select("sellers",array("seller_user_name" => $login_seller_user_name));
-$row_login_seller = $select_login_seller->fetch();
-$login_seller_id = $row_login_seller->seller_id;
-$login_seller_vacation = $row_login_seller->seller_vacation;
+	session_start();
+	require_once("../includes/db.php");
+	if(!isset($_SESSION['seller_user_name'])){
+		echo "<script>window.open('../login','_self')</script>";
+	}
+	$login_seller_user_name = $_SESSION['seller_user_name'];
+	$select_login_seller = $db->select("sellers",array("seller_user_name" => $login_seller_user_name));
+	$row_login_seller = $select_login_seller->fetch();
+	$login_seller_id = $row_login_seller->seller_id;
+	$login_seller_vacation = $row_login_seller->seller_vacation;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="<?=($lang_dir == "right" ? 'rtl':'ltr')?>" class="ui-toolkit">

@@ -75,7 +75,7 @@ $count_active_proposals = $db->count("proposals",array("proposal_seller_id"=>$lo
 		<p class="text-muted text-center"><?= $level_title; ?></p>
 	</center>
 	<div class="row p-3">
-		<div class="col-md-6">
+		<div class="col-md-6 small-text">
 			<p><i class="fa fa-star pr-1"></i> Rating </p>
 			<p><i class="fa fa-globe pr-1"></i> From</p>
 			<p><i class="fa fa-truck pr-1"></i> Last delivery</p>
@@ -90,7 +90,7 @@ $count_active_proposals = $db->count("proposals",array("proposal_seller_id"=>$lo
 			<p> <i class="fa fa-language pr-1"></i> <?= $language_title; ?></p>
 			<?php } ?>
 		</div>
-		<div class="col-md-6 text-right">
+		<div class="col-md-6 text-right small-text">
 			<p class="font-weight-bold"><?= $seller_rating; ?>%</p>
 			<p class="font-weight-bold"><?= $seller_country; ?></p>
 			<p class="font-weight-bold"><?= $seller_recent_delivery; ?></p>
